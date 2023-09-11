@@ -19,14 +19,16 @@ const timeOptions = [
 ];
 
 type Props = {
-  setTimerMinutesMinutes(minutes: number): void;
+  setTimer(timestamp: Date): void;
 };
-export const SetTimeLimitStep = ({ setTimerMinutesMinutes }: Props) => {
+
+export const SetTimeLimitStep = ({ setTimer }: Props) => {
   const { setStep, getStep } = useWizard();
   const nextStep = getStep(MeditationWizardStep.CHOOSE_POSITION);
+
   const selectTimeHandler = (minutes: number) => {
     if (nextStep) {
-      setTimerMinutesMinutes(minutes);
+      setTimer(new Date(0, 0, 0, 0, minutes, 0));
       return setStep(nextStep);
     }
 

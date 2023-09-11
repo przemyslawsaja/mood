@@ -7,7 +7,7 @@ import {
 } from "@/app/dashboard/meditation/constants";
 import { ReactNode, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { RoutePath } from "@/constants/routes";
+import { RoutePath } from "@/constants/routing";
 import { SetTimeLimitStep } from "@/app/dashboard/meditation/steps/set-time-limit-step";
 
 const SContainer = styled.div`
@@ -15,10 +15,10 @@ const SContainer = styled.div`
 `;
 
 type Props = {
-  setTimerMinutesMinutes(minutes: number): void;
+  setTimer(timestamp: Date): void;
 };
 
-export const MeditationWizard = ({ setTimerMinutesMinutes }: Props) => {
+export const MeditationWizard = ({ setTimer }: Props) => {
   const { push } = useRouter();
   const { remainingSteps, completedSteps, activeStep, initializeSteps } =
     useWizard();
@@ -28,7 +28,7 @@ export const MeditationWizard = ({ setTimerMinutesMinutes }: Props) => {
     ReactNode
   > = {
     [MeditationWizardStep.SET_TIME_LIMIT]: (
-      <SetTimeLimitStep {...{ setTimerMinutesMinutes }} />
+      <SetTimeLimitStep {...{ setTimer }} />
     ),
     [MeditationWizardStep.CHOOSE_POSITION]: <div />,
     [MeditationWizardStep.FOCUS_ON_BREATH]: <div />,

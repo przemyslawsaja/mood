@@ -7,7 +7,7 @@ import { Button } from "@/components/button";
 import ArrowForwardSvg from "@/assets/icons/arrow-forward.svg";
 import { COLOR } from "@/theme/styles/color";
 import Link from "next/link";
-import { RoutePath } from "@/constants/routes";
+import { RoutePath } from "@/constants/routing";
 import { ButtonVariant } from "@/components/button/constants";
 
 const SLogo = styled.h1`

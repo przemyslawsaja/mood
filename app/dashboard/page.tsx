@@ -8,7 +8,7 @@ import MeditateSvg from "@/assets/icons/meditate.svg";
 import BookSvg from "@/assets/icons/book.svg";
 import { useState } from "react";
 import { Button } from "@/components/button";
-import { RoutePath } from "@/constants/routes";
+import { RoutePath } from "@/constants/routing";
 import { useRouter } from "next/navigation";
 
 const SHeader = styled.h1`
