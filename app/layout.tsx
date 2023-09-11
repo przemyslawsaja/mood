@@ -1,13 +1,17 @@
-import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import React from "react";
+import { Providers } from "@/app/providers";
+import { Poppins } from "@next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+});
 
 export const metadata: Metadata = {
-  title: "DestiGo",
-  description: "Travel planner",
+  title: "Mood",
+  description:
+    "Experience tranquility and productivity at your fingertips with our meditation and focus app. Choose your path to inner balance and mental clarity. Meditate for calm or sharpen your focus for peak performance. Begin your mindful journey today.",
 };
 
 export default function RootLayout({
@@ -17,7 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={poppins.className}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
