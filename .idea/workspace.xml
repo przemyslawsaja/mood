@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c9920635-7e20-4a5c-897d-eb948416ebde" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/auth/layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/auth/sign-in/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/meditation/components/meditation-introduction/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/meditation/components/meditation-wizard/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/meditation/constants/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/meditation/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/meditation/steps/body-scan/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/meditation/steps/focus-on-breath/constants/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/meditation/steps/focus-on-breath/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/meditation/steps/set-time-limit-step/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/loading.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/providers.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icons/arrow-back.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icons/arrow-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icons/arrow-forward.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icons/book.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icons/meditate.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icons/timer.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/blue-light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/pink-light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/lotties/loader.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/lotties/meditation.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/lotties/time.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/badge/constants/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/badge/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/button/constants/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/button/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/drawer/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/modal/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/well/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/date.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/routing.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebase/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hooks/use-timer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hooks/use-toggle.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/registry.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/wizard/components/wizard-step/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/wizard/constants/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/wizard/hooks/use-wizard.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/wizard/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/wizard/state/context.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/wizard/state/reducer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/backend/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/backend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/frontend/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/frontend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/frontend/.prettierignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/frontend/.prettierrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/global-styles.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/styles/border-radius.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/styles/breakpoints.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/styles/color.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/styles/font.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/styles/media.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/styles/shadow.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/styles/transition.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/styles/z-index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/common.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/typings/styled-components.d.ts" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/backend" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2SQvHFo4zixtpeUdFsXVYsGc7MH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/przemyslawsaja/Repositories/mood",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "/Users/przemyslawsaja/.nvm/versions/node/v18.17.0/bin/node",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/przemyslawsaja/Repositories/mood/packages/frontend/node_modules/prettier",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.notifications",
+    "ts.external.directory.path": "/Users/przemyslawsaja/Repositories/mood/backend/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/packages/frontend" />
+      <recent name="$PROJECT_DIR$/assets/svg" />
+      <recent name="$PROJECT_DIR$/assets/icons" />
+      <recent name="$PROJECT_DIR$/hooks" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/app/dashboard/meditation/steps/choose-position/constants/index.ts" />
+      <recent name="$PROJECT_DIR$/types/common.ts" />
+      <recent name="$PROJECT_DIR$/components/button/constants/index.ts" />
+      <recent name="$PROJECT_DIR$/modules/wizard/state/reducer.ts" />
+      <recent name="$PROJECT_DIR$/modules/wizard/constants/index.ts" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c9920635-7e20-4a5c-897d-eb948416ebde" name="Changes" comment="" />
+      <created>1689091529896</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1689091529896</updated>
+      <workItem from="1689091533339" duration="7592000" />
+      <workItem from="1689178117353" duration="6139000" />
+      <workItem from="1689230444803" duration="599000" />
+      <workItem from="1689336781858" duration="7514000" />
+      <workItem from="1689436186875" duration="5633000" />
+      <workItem from="1690480895690" duration="1024000" />
+      <workItem from="1690658617806" duration="8715000" />
+      <workItem from="1693144912473" duration="3262000" />
+      <workItem from="1693250167982" duration="1135000" />
+      <workItem from="1693292961664" duration="636000" />
+      <workItem from="1694009251225" duration="39828000" />
+      <workItem from="1694158545622" duration="40000" />
+      <workItem from="1694181683695" duration="17585000" />
+      <workItem from="1694424159053" duration="23222000" />
+      <workItem from="1694522298469" duration="3038000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
