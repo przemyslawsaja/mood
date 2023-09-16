@@ -83,7 +83,7 @@
   },
   "edgeSSRModuleMapping": {},
   "clientModules": {
-    "/Users/przemyslawsaja/Repositories/mood/packages/frontend/node_modules/next/dist/client/components/error-boundary.js": {
+    "/Users/przemyslawsaja/Repositories/mood/frontend/node_modules/next/dist/client/components/error-boundary.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
       "name": "*",
       "chunks": [
@@ -91,7 +91,7 @@
       ],
       "async": false
     },
-    "/Users/przemyslawsaja/Repositories/mood/packages/frontend/node_modules/next/dist/esm/client/components/error-boundary.js": {
+    "/Users/przemyslawsaja/Repositories/mood/frontend/node_modules/next/dist/esm/client/components/error-boundary.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
       "name": "*",
       "chunks": [
@@ -99,7 +99,7 @@
       ],
       "async": false
     },
-    "/Users/przemyslawsaja/Repositories/mood/packages/frontend/node_modules/next/dist/client/components/app-router.js": {
+    "/Users/przemyslawsaja/Repositories/mood/frontend/node_modules/next/dist/client/components/app-router.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
       "name": "*",
       "chunks": [
@@ -107,7 +107,7 @@
       ],
       "async": false
     },
-    "/Users/przemyslawsaja/Repositories/mood/packages/frontend/node_modules/next/dist/esm/client/components/app-router.js": {
+    "/Users/przemyslawsaja/Repositories/mood/frontend/node_modules/next/dist/esm/client/components/app-router.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
       "name": "*",
       "chunks": [
@@ -115,7 +115,7 @@
       ],
       "async": false
     },
-    "/Users/przemyslawsaja/Repositories/mood/packages/frontend/node_modules/next/dist/client/components/layout-router.js": {
+    "/Users/przemyslawsaja/Repositories/mood/frontend/node_modules/next/dist/client/components/layout-router.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
       "name": "*",
       "chunks": [
@@ -123,7 +123,7 @@
       ],
       "async": false
     },
-    "/Users/przemyslawsaja/Repositories/mood/packages/frontend/node_modules/next/dist/esm/client/components/layout-router.js": {
+    "/Users/przemyslawsaja/Repositories/mood/frontend/node_modules/next/dist/esm/client/components/layout-router.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
       "name": "*",
       "chunks": [
@@ -131,7 +131,7 @@
       ],
       "async": false
     },
-    "/Users/przemyslawsaja/Repositories/mood/packages/frontend/node_modules/next/dist/client/components/render-from-template-context.js": {
+    "/Users/przemyslawsaja/Repositories/mood/frontend/node_modules/next/dist/client/components/render-from-template-context.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
       "name": "*",
       "chunks": [
@@ -139,7 +139,7 @@
       ],
       "async": false
     },
-    "/Users/przemyslawsaja/Repositories/mood/packages/frontend/node_modules/next/dist/esm/client/components/render-from-template-context.js": {
+    "/Users/przemyslawsaja/Repositories/mood/frontend/node_modules/next/dist/esm/client/components/render-from-template-context.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
       "name": "*",
       "chunks": [
@@ -147,7 +147,7 @@
       ],
       "async": false
     },
-    "/Users/przemyslawsaja/Repositories/mood/packages/frontend/node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js": {
+    "/Users/przemyslawsaja/Repositories/mood/frontend/node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
       "name": "*",
       "chunks": [
@@ -155,7 +155,7 @@
       ],
       "async": false
     },
-    "/Users/przemyslawsaja/Repositories/mood/packages/frontend/node_modules/next/dist/esm/client/components/static-generation-searchparams-bailout-provider.js": {
+    "/Users/przemyslawsaja/Repositories/mood/frontend/node_modules/next/dist/esm/client/components/static-generation-searchparams-bailout-provider.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
       "name": "*",
       "chunks": [
@@ -163,7 +163,7 @@
       ],
       "async": false
     },
-    "/Users/przemyslawsaja/Repositories/mood/packages/frontend/node_modules/@next/font/google/target.css?{\"path\":\"app/layout.tsx\",\"import\":\"Poppins\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":[\"300\",\"400\",\"500\",\"700\"]}],\"variableName\":\"poppins\"}": {
+    "/Users/przemyslawsaja/Repositories/mood/frontend/node_modules/@next/font/google/target.css?{\"path\":\"app/layout.tsx\",\"import\":\"Poppins\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":[\"300\",\"400\",\"500\",\"700\"]}],\"variableName\":\"poppins\"}": {
       "id": "(app-client)/./node_modules/@next/font/google/target.css?{\"path\":\"app/layout.tsx\",\"import\":\"Poppins\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":[\"300\",\"400\",\"500\",\"700\"]}],\"variableName\":\"poppins\"}",
       "name": "*",
       "chunks": [
@@ -171,7 +171,7 @@
       ],
       "async": false
     },
-    "/Users/przemyslawsaja/Repositories/mood/packages/frontend/app/providers.tsx": {
+    "/Users/przemyslawsaja/Repositories/mood/frontend/app/providers.tsx": {
       "id": "(app-client)/./app/providers.tsx",
       "name": "*",
       "chunks": [
@@ -179,7 +179,7 @@
       ],
       "async": false
     },
-    "/Users/przemyslawsaja/Repositories/mood/packages/frontend/app/loading.tsx": {
+    "/Users/przemyslawsaja/Repositories/mood/frontend/app/loading.tsx": {
       "id": "(app-client)/./app/loading.tsx",
       "name": "*",
       "chunks": [
@@ -187,7 +187,7 @@
       ],
       "async": false
     },
-    "/Users/przemyslawsaja/Repositories/mood/packages/frontend/app/dashboard/page.tsx": {
+    "/Users/przemyslawsaja/Repositories/mood/frontend/app/dashboard/page.tsx": {
       "id": "(app-client)/./app/dashboard/page.tsx",
       "name": "*",
       "chunks": [
@@ -195,7 +195,7 @@
       ],
       "async": false
     },
-    "/Users/przemyslawsaja/Repositories/mood/packages/frontend/app/dashboard/layout.tsx": {
+    "/Users/przemyslawsaja/Repositories/mood/frontend/app/dashboard/layout.tsx": {
       "id": "(app-client)/./app/dashboard/layout.tsx",
       "name": "*",
       "chunks": [
@@ -203,7 +203,7 @@
       ],
       "async": false
     },
-    "/Users/przemyslawsaja/Repositories/mood/packages/frontend/app/dashboard/meditation/page.tsx": {
+    "/Users/przemyslawsaja/Repositories/mood/frontend/app/dashboard/meditation/page.tsx": {
       "id": "(app-client)/./app/dashboard/meditation/page.tsx",
       "name": "*",
       "chunks": [
@@ -213,12 +213,12 @@
     }
   },
   "entryCSSFiles": {
-    "/Users/przemyslawsaja/Repositories/mood/packages/frontend/app/layout": [
+    "/Users/przemyslawsaja/Repositories/mood/frontend/app/layout": [
       "static/css/app/layout.css"
     ],
-    "/Users/przemyslawsaja/Repositories/mood/packages/frontend/app/loading": [],
-    "/Users/przemyslawsaja/Repositories/mood/packages/frontend/app/dashboard/page": [],
-    "/Users/przemyslawsaja/Repositories/mood/packages/frontend/app/dashboard/layout": [],
-    "/Users/przemyslawsaja/Repositories/mood/packages/frontend/app/dashboard/meditation/page": []
+    "/Users/przemyslawsaja/Repositories/mood/frontend/app/loading": [],
+    "/Users/przemyslawsaja/Repositories/mood/frontend/app/dashboard/page": [],
+    "/Users/przemyslawsaja/Repositories/mood/frontend/app/dashboard/layout": [],
+    "/Users/przemyslawsaja/Repositories/mood/frontend/app/dashboard/meditation/page": []
   }
 }

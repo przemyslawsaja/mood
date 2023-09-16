@@ -1,4 +1,4 @@
-// File: /Users/przemyslawsaja/Repositories/mood/packages/frontend/app/dashboard/meditation/page.tsx
+// File: /Users/przemyslawsaja/Repositories/mood/frontend/app/dashboard/meditation/page.tsx
 import * as entry from '../../../../../app/dashboard/meditation/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -5,75 +5,65 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9920635-7e20-4a5c-897d-eb948416ebde" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/auth/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/auth/sign-in/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/meditation/components/meditation-introduction/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/meditation/components/meditation-wizard/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/meditation/constants/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/meditation/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/meditation/steps/body-scan/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/meditation/steps/focus-on-breath/constants/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/meditation/steps/focus-on-breath/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/meditation/steps/set-time-limit-step/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/loading.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/providers.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/arrow-back.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/arrow-down.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/arrow-forward.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/book.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/meditate.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/timer.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/blue-light.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/pink-light.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/lotties/loader.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/lotties/meditation.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/lotties/time.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/badge/constants/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/badge/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/button/constants/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/button/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/drawer/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/modal/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/well/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants/date.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants/routing.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebase/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/use-timer.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/use-toggle.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/registry.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/wizard/components/wizard-step/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/wizard/constants/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/wizard/hooks/use-wizard.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/wizard/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/wizard/state/context.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/wizard/state/reducer.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/backend/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/backend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/frontend/.eslintrc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/frontend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/frontend/.prettierignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/frontend/.prettierrc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/global-styles.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/styles/border-radius.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/styles/breakpoints.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/styles/color.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/styles/font.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/styles/media.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/styles/shadow.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/styles/transition.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/styles/z-index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/common.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/typings/styled-components.d.ts" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.next/server/app/favicon.ico/route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/build-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/build-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/0.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/0.pack.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/1.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/1.pack.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/2.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/2.pack.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/3.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/3.pack.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/4.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/4.pack.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/index.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/index.pack.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/index.pack.gz.old" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/client-development/index.pack.gz.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/edge-server-development/0.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/edge-server-development/0.pack.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/edge-server-development/index.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/edge-server-development/index.pack.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/edge-server-development/index.pack.gz.old" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/edge-server-development/index.pack.gz.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/0.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/0.pack.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/1.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/1.pack.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/2.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/2.pack.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/3.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/3.pack.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/index.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/index.pack.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/index.pack.gz.old" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/cache/webpack/server-development/index.pack.gz.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/server/_error.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/server/app-paths-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/server/app-paths-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/server/app/dashboard/meditation/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/server/app/dashboard/meditation/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/server/app/dashboard/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/server/app/dashboard/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/server/client-reference-manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/server/client-reference-manifest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/server/client-reference-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/server/client-reference-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/server/edge-runtime-webpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/server/edge-runtime-webpack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/server/middleware-build-manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/server/middleware-build-manifest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/server/middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/server/middleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/server/next-font-manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/server/next-font-manifest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/server/next-font-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/server/next-font-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/server/pages-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/server/pages-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/server/pages/_app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/server/pages/_document.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/server/pages/_error.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/server/webpack-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/server/webpack-runtime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/static/chunks/_error.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/static/chunks/app-client-internals.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/static/chunks/app-client-internals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/static/chunks/app/dashboard/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/static/chunks/app/dashboard/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/static/chunks/app/dashboard/meditation/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/static/chunks/app/dashboard/meditation/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/static/chunks/app/dashboard/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/static/chunks/app/dashboard/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/static/chunks/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/static/chunks/app/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/static/chunks/app/loading.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/static/chunks/app/loading.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/static/chunks/main-app.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/static/chunks/main-app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/static/chunks/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/static/chunks/pages/_app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/static/chunks/pages/_error.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/static/chunks/webpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/static/chunks/webpack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/static/development/_buildManifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/static/development/_buildManifest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/9d9024f58ac6d224.webpack.hot-update.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/static/webpack/39b053f0a7ac6d16.webpack.hot-update.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/d4d3c87e74a0397b.webpack.hot-update.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/webpack.08bbe3671c2a994f.hot-update.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/static/webpack/webpack.08bbe3671c2a994f.hot-update.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/webpack.9d9024f58ac6d224.hot-update.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/static/webpack/webpack.39b053f0a7ac6d16.hot-update.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/static/webpack/webpack.d4d3c87e74a0397b.hot-update.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/trace" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/trace" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/types/app/dashboard/layout.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/types/app/dashboard/layout.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/types/app/dashboard/meditation/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/types/app/dashboard/meditation/page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/types/app/dashboard/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/types/app/dashboard/page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.next/types/app/layout.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.next/types/app/layout.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +71,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/backend" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -105,19 +95,19 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "/Users/przemyslawsaja/.nvm/versions/node/v18.17.0/bin/node",
     "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/przemyslawsaja/Repositories/mood/packages/frontend/node_modules/prettier",
+    "prettierjs.PrettierConfiguration.Package": "/Users/przemyslawsaja/Repositories/mood/frontend/node_modules/prettier",
     "settings.editor.selected.configurable": "reference.settings.ide.settings.notifications",
-    "ts.external.directory.path": "/Users/przemyslawsaja/Repositories/mood/backend/node_modules/typescript/lib",
+    "ts.external.directory.path": "/Users/przemyslawsaja/Repositories/mood/frontend/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend/src/sound-set/schemas" />
+      <recent name="$PROJECT_DIR$/backend/src/auth/schemas" />
+      <recent name="$PROJECT_DIR$/backend/src/sound-set" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/packages/frontend" />
-      <recent name="$PROJECT_DIR$/assets/svg" />
-      <recent name="$PROJECT_DIR$/assets/icons" />
-      <recent name="$PROJECT_DIR$/hooks" />
     </key>
     <key name="es6.move.members.recent.items">
       <recent name="$PROJECT_DIR$/app/dashboard/meditation/steps/choose-position/constants/index.ts" />
@@ -149,7 +139,8 @@
       <workItem from="1694158545622" duration="40000" />
       <workItem from="1694181683695" duration="17585000" />
       <workItem from="1694424159053" duration="23222000" />
-      <workItem from="1694522298469" duration="3038000" />
+      <workItem from="1694522298469" duration="13301000" />
+      <workItem from="1694786438725" duration="9237000" />
     </task>
     <servers />
   </component>

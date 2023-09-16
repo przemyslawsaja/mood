@@ -1,4 +1,4 @@
-// File: /Users/przemyslawsaja/Repositories/mood/packages/frontend/app/layout.tsx
+// File: /Users/przemyslawsaja/Repositories/mood/frontend/app/layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
