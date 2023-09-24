@@ -1,13 +1,20 @@
 "use client";
-import React from "react";
-import BlueLight from "@/assets/images/blue-light.png";
-import PinkLight from "@/assets/images/pink-light.png";
+import BlueLight from "@/assets/images/blue.png";
+import PinkLight from "@/assets/images/pink.png";
 import styled, { css } from "styled-components";
 import Image from "next/image";
+import { RoutePath } from "@/constants/routing";
+import ArrowForwardSvg from "@/assets/icons/arrow-forward.svg";
+import { COLOR } from "@/theme/styles/color";
+import Link from "next/link";
+import { useEffect } from "react";
+import { useSession } from "next-auth/react";
+import { SessionStatus } from "@/constants/browser";
+import { useRouter } from "next/navigation";
 
 const SBlueLight = styled(Image)`
   z-index: -1;
-  position: absolute;
+  position: fixed;
   top: 5rem;
   width: 100%;
 
@@ -37,20 +44,41 @@ const SPinkLight = styled(Image)`
 `;
 
 const SContainer = styled.div`
-  width: 100%;
-  margin: auto;
-  padding: 2rem;
-  overflow: hidden;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
 
   ${({ theme: { BREAKPOINTS, MEDIA } }) => css`
     ${MEDIA.MIN_WIDTH(BREAKPOINTS.MD)} {
-      max-width: 100rem;
-      padding: 5rem;
-      overflow: visible;
-      height: 100%;
+      justify-content: center;
     }
   `};
+`;
+
+const SLogo = styled.h1`
+  opacity: 0.5;
+  font-size: ${({ theme }) => theme.FONT.SIZE.XL5};
+
+  ${({ theme: { BREAKPOINTS, MEDIA } }) => css`
+    ${MEDIA.MIN_WIDTH(BREAKPOINTS.MD)} {
+      padding-top: 0rem;
+    }
+  `};
+`;
+
+const SLink = styled(Link)`
+  margin-top: 0.5rem;
+  color: ${({ theme }) => theme.COLOR.GRAY_400};
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  align-self: center;
+`;
+
+const SArrowForwardSvg = styled(ArrowForwardSvg)`
+  transform: scale(0.5);
 `;
 
 export default function AuthLayout({
@@ -58,11 +86,27 @@ export default function AuthLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const { status } = useSession();
+  const { push } = useRouter();
+
+  useEffect(() => {
+    if (status === SessionStatus.Authenticated) {
+      push(RoutePath.DASHBOARD);
+    }
+  }, [status]);
+
   return (
     <>
       <SBlueLight src={BlueLight} alt={""} />
       <SPinkLight src={PinkLight} alt={""} />
-      <SContainer>{children}</SContainer>;
+      <SContainer>
+        <SLogo>mood.</SLogo>
+        {children}
+        <SLink href={RoutePath.DASHBOARD}>
+          I want to use it without account{" "}
+          <SArrowForwardSvg color={COLOR.GRAY_400} />
+        </SLink>
+      </SContainer>
     </>
   );
 }

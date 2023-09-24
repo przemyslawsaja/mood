@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components";
 import { COLOR } from "@/theme/styles/color";
 import React, { ElementType } from "react";
-import BlueLight from "@/assets/images/blue-light.png";
-import PinkLight from "@/assets/images/pink-light.png";
+import BlueLight from "@/assets/images/blue.png";
+import PinkLight from "@/assets/images/pink.png";
 import Image from "next/image";
 
 const SWellContainer = styled.div<{

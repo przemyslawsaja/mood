@@ -3,8 +3,8 @@ import LoaderLottie from "@/assets/lotties/loader.json";
 import { Player } from "@lottiefiles/react-lottie-player";
 import styled from "styled-components";
 import Image from "next/image";
-import BlueLight from "@/assets/images/blue-light.png";
-import PinkLight from "@/assets/images/pink-light.png";
+import BlueLight from "@/assets/images/blue.png";
+import PinkLight from "@/assets/images/pink.png";
 import React from "react";
 
 const SContainer = styled.div`

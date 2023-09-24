@@ -39,10 +39,12 @@ export class AuthService {
     return { token };
   }
 
-  async login(loginDto: LoginDto): Promise<{ token: string }> {
+  async login(
+    loginDto: LoginDto,
+  ): Promise<{ token: string } & Pick<User, 'name' | 'email'>> {
     const { email, password } = loginDto;
 
-    const user = await this.userModel.findOne({ email });
+    const user: User = await this.userModel.findOne({ email });
 
     if (!user) {
       throw new UnauthorizedException('Invalid email or password');
@@ -58,6 +60,6 @@ export class AuthService {
       id: user._id,
     });
 
-    return { token };
+    return { token, email, name: user.name };
   }
 }

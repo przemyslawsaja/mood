@@ -2,8 +2,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import Image from "next/image";
-import BlueLight from "@/assets/images/blue-light.png";
-import PinkLight from "@/assets/images/pink-light.png";
+import BlueLight from "@/assets/images/blue.png";
+import PinkLight from "@/assets/images/pink.png";
 import { WizardProvider } from "@/modules/wizard/state/context";
 
 const SBlueLight = styled(Image)`

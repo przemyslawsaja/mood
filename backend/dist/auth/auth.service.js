@@ -54,7 +54,7 @@ let AuthService = class AuthService {
         const token = this.jwtService.sign({
             id: user._id,
         });
-        return { token };
+        return { token, email, name: user.name };
     }
 };
 exports.AuthService = AuthService;

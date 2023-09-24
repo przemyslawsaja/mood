@@ -12,5 +12,5 @@ export declare class AuthService {
     }>;
     login(loginDto: LoginDto): Promise<{
         token: string;
-    }>;
+    } & Pick<User, 'name' | 'email'>>;
 }

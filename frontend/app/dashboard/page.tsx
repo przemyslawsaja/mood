@@ -1,7 +1,7 @@
 "use client";
 import styled, { css } from "styled-components";
-import BlueLight from "@/assets/images/blue-light.png";
-import PinkLight from "@/assets/images/pink-light.png";
+import BlueLight from "@/assets/images/blue.png";
+import PinkLight from "@/assets/images/pink.png";
 import Image from "next/image";
 import { Well } from "@/components/well";
 import MeditateSvg from "@/assets/icons/meditate.svg";
@@ -10,6 +10,8 @@ import { useState } from "react";
 import { Button } from "@/components/button";
 import { RoutePath } from "@/constants/routing";
 import { useRouter } from "next/navigation";
+import { getSoundSets } from "@/api/sound-set";
+import { useEffect } from "react";
 
 const SHeader = styled.h1`
   text-align: center;
@@ -105,6 +107,10 @@ export default function Page() {
   const [activeWellPath, setActiveWellPath] = useState<RoutePath>(
     RoutePath.MEDITATION,
   );
+
+  useEffect(() => {
+    const data = getSoundSets();
+  }, []);
 
   return (
     <SWrapper>

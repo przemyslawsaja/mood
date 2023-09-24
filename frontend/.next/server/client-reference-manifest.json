@@ -40,6 +40,30 @@
         "async": false
       }
     },
+    "(app-client)/./app/auth/layout.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/auth/layout.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/auth/sign-in/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/auth/sign-in/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/react-hot-toast/dist/index.mjs": {
+      "*": {
+        "id": "(sc_client)/./node_modules/react-hot-toast/dist/index.mjs",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
     "(app-client)/./app/providers.tsx": {
       "*": {
         "id": "(sc_client)/./app/providers.tsx",
@@ -67,14 +91,6 @@
     "(app-client)/./app/dashboard/layout.tsx": {
       "*": {
         "id": "(sc_client)/./app/dashboard/layout.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./app/dashboard/meditation/page.tsx": {
-      "*": {
-        "id": "(sc_client)/./app/dashboard/meditation/page.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -163,6 +179,30 @@
       ],
       "async": false
     },
+    "/Users/przemyslawsaja/Repositories/mood/frontend/app/auth/layout.tsx": {
+      "id": "(app-client)/./app/auth/layout.tsx",
+      "name": "*",
+      "chunks": [
+        "app/auth/layout:static/chunks/app/auth/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/przemyslawsaja/Repositories/mood/frontend/app/auth/sign-in/page.tsx": {
+      "id": "(app-client)/./app/auth/sign-in/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/auth/sign-in/page:static/chunks/app/auth/sign-in/page.js"
+      ],
+      "async": false
+    },
+    "/Users/przemyslawsaja/Repositories/mood/frontend/node_modules/react-hot-toast/dist/index.mjs": {
+      "id": "(app-client)/./node_modules/react-hot-toast/dist/index.mjs",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
     "/Users/przemyslawsaja/Repositories/mood/frontend/node_modules/@next/font/google/target.css?{\"path\":\"app/layout.tsx\",\"import\":\"Poppins\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":[\"300\",\"400\",\"500\",\"700\"]}],\"variableName\":\"poppins\"}": {
       "id": "(app-client)/./node_modules/@next/font/google/target.css?{\"path\":\"app/layout.tsx\",\"import\":\"Poppins\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":[\"300\",\"400\",\"500\",\"700\"]}],\"variableName\":\"poppins\"}",
       "name": "*",
@@ -202,23 +242,16 @@
         "app/dashboard/layout:static/chunks/app/dashboard/layout.js"
       ],
       "async": false
-    },
-    "/Users/przemyslawsaja/Repositories/mood/frontend/app/dashboard/meditation/page.tsx": {
-      "id": "(app-client)/./app/dashboard/meditation/page.tsx",
-      "name": "*",
-      "chunks": [
-        "app/dashboard/meditation/page:static/chunks/app/dashboard/meditation/page.js"
-      ],
-      "async": false
     }
   },
   "entryCSSFiles": {
+    "/Users/przemyslawsaja/Repositories/mood/frontend/app/auth/layout": [],
+    "/Users/przemyslawsaja/Repositories/mood/frontend/app/auth/sign-in/page": [],
     "/Users/przemyslawsaja/Repositories/mood/frontend/app/layout": [
       "static/css/app/layout.css"
     ],
     "/Users/przemyslawsaja/Repositories/mood/frontend/app/loading": [],
     "/Users/przemyslawsaja/Repositories/mood/frontend/app/dashboard/page": [],
-    "/Users/przemyslawsaja/Repositories/mood/frontend/app/dashboard/layout": [],
-    "/Users/przemyslawsaja/Repositories/mood/frontend/app/dashboard/meditation/page": []
+    "/Users/przemyslawsaja/Repositories/mood/frontend/app/dashboard/layout": []
   }
 }

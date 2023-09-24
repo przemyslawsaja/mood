@@ -9,6 +9,11 @@ export type Color = {
   INDIGO_300: string;
   INDIGO_400: string;
   INDIGO_500: string;
+  NIGHTFALL_100: string;
+  NIGHTFALL_200: string;
+  NIGHTFALL_300: string;
+  NIGHTFALL_400: string;
+  NIGHTFALL_500: string;
   SUCCESS_100: string;
   SUCCESS_200: string;
   SUCCESS_300: string;
@@ -43,6 +48,11 @@ export const COLOR: Color = {
   INDIGO_300: "#563488",
   INDIGO_400: "#3C1C6B",
   INDIGO_500: "#33155E",
+  NIGHTFALL_100: "#2A135B",
+  NIGHTFALL_200: "#230E4A",
+  NIGHTFALL_300: "#1D0D3E",
+  NIGHTFALL_400: "#150A2D",
+  NIGHTFALL_500: "#0F0721",
   SUCCESS_100: "#E5FCC8",
   SUCCESS_200: "#D1FA9E",
   SUCCESS_300: "#C0F67B",
