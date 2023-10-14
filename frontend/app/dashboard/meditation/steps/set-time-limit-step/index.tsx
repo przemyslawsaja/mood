@@ -1,8 +1,8 @@
-import { Badge } from "@/components/badge";
-import { BadgeVariant } from "@/components/badge/constants";
-import styled from "styled-components";
-import { useWizard } from "@/modules/wizard/hooks/use-wizard";
-import { MeditationWizardStep } from "@/app/dashboard/meditation/constants";
+import { Badge } from '@/components/badge';
+import { BadgeVariant } from '@/components/badge/constants';
+import styled from 'styled-components';
+import { useWizard } from '@/modules/wizard/hooks/use-wizard';
+import { MeditationWizardStep } from '@/app/dashboard/meditation/constants';
 
 const SContainer = styled.div`
   display: flex;
@@ -12,18 +12,18 @@ const SContainer = styled.div`
 `;
 
 const timeOptions = [
-  { label: "5 min", value: 5 },
-  { label: "10 min", value: 10 },
-  { label: "15 min", value: 15 },
-  { label: "20 min", value: 20 },
-  { label: "30 min", value: 30 },
+  { label: '5 min', value: 5 },
+  { label: '10 min', value: 10 },
+  { label: '15 min', value: 15 },
+  { label: '20 min', value: 20 },
+  { label: '30 min', value: 30 },
 ];
 
 type Props = {
   setTimer(timestamp: Date): void;
 };
 
-export const SetTimeLimit = ({ setTimer }: Props) => {
+export function SetTimeLimit({ setTimer }: Props) {
   const { setStep, getStep } = useWizard();
   const nextStep = getStep(MeditationWizardStep.CHOOSE_POSITION);
 
@@ -33,7 +33,7 @@ export const SetTimeLimit = ({ setTimer }: Props) => {
       return setStep(nextStep);
     }
 
-    throw new Error("Step not found");
+    throw new Error('Step not found');
   };
 
   return (
@@ -49,4 +49,4 @@ export const SetTimeLimit = ({ setTimer }: Props) => {
       ))}
     </SContainer>
   );
-};
+}

@@ -1,10 +1,11 @@
-"use client";
-import React from "react";
-import styled, { css } from "styled-components";
-import Image from "next/image";
-import BlueLight from "@/assets/images/blue.png";
-import PinkLight from "@/assets/images/pink.png";
-import { WizardProvider } from "@/modules/wizard/state/context";
+'use client';
+
+import React from 'react';
+import styled, { css } from 'styled-components';
+import Image from 'next/image';
+import BlueLight from '@/assets/images/blue.png';
+import PinkLight from '@/assets/images/pink.png';
+import { WizardProvider } from '@/modules/wizard/state/context';
 
 const SBlueLight = styled(Image)`
   z-index: -1;
@@ -62,8 +63,8 @@ export default function DashboardLayout({
 }) {
   return (
     <>
-      <SBlueLight src={BlueLight} alt={""} />
-      <SPinkLight src={PinkLight} alt={""} />
+      <SBlueLight src={BlueLight} alt="" />
+      <SPinkLight src={PinkLight} alt="" />
       <SContainer>
         <WizardProvider>{children}</WizardProvider>
       </SContainer>

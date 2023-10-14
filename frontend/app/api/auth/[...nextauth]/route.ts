@@ -1,11 +1,13 @@
-import { NextAuthOptions } from "next-auth";
-import NextAuth from "next-auth/next";
-import CredentialsProvider from "next-auth/providers/credentials";
-import { apiSignIn, SignInDto, SignInPayload } from "@/api/auth";
+import { NextAuthOptions } from 'next-auth';
+import NextAuth from 'next-auth/next';
+import CredentialsProvider from 'next-auth/providers/credentials';
+import { apiSignIn, SignInDto, SignInPayload } from '@/api/auth';
+import { RoutePath } from "@/constants/routing";
+
 export const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
-      name: "Credentials",
+      name: 'Credentials',
       credentials: {},
       async authorize(credentials, req) {
         return await apiSignIn(credentials as SignInPayload);
@@ -24,7 +26,7 @@ export const authOptions: NextAuthOptions = {
   },
   secret: process.env.NEXTAUTH_SECRET,
   pages: {
-    signIn: "/auth/sign-in",
+    signIn: RoutePath.SIGN_IN,
   },
 };
 

@@ -1,5 +1,5 @@
-import { styled } from "styled-components";
-import { Control, FieldError, useController } from "react-hook-form";
+import { styled } from 'styled-components';
+import { Control, FieldError, useController } from 'react-hook-form';
 
 const SContainer = styled.div`
   display: flex;
@@ -33,7 +33,7 @@ const SError = styled.div`
 
 type InputAttrs = Pick<
   HTMLInputElement,
-  "disabled" | "max" | "maxLength" | "min" | "placeholder" | "type"
+  'disabled' | 'max' | 'maxLength' | 'min' | 'placeholder' | 'type'
 >;
 
 type Props = Partial<InputAttrs> & {
@@ -41,17 +41,15 @@ type Props = Partial<InputAttrs> & {
   control: Control<any>;
   error?: FieldError;
   name: string;
-  capture?: boolean | "user" | "environment";
 };
 
-export const Input = ({
+export function Input({
   label,
   name,
   control,
   error,
-  capture,
   ...props
-}: Props) => {
+}: Props) {
   const { field } = useController({
     name,
     control,
@@ -61,8 +59,13 @@ export const Input = ({
   return (
     <SContainer>
       <SLabel>{label}</SLabel>
-      <SInput value={value} onChange={onChange} {...props} capture={capture} />
-      {error && <SError>*{error?.message}</SError>}
+      <SInput value={value} onChange={onChange} {...props} />
+      {error && (
+      <SError>
+        *
+        {error?.message}
+      </SError>
+      )}
     </SContainer>
   );
-};
+}

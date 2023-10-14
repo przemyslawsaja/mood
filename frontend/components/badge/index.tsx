@@ -1,6 +1,6 @@
-import styled, { css, RuleSet } from "styled-components";
-import { BadgeVariant } from "@/components/badge/constants";
-import { ButtonHTMLAttributes, ReactNode } from "react";
+import styled, { css, RuleSet } from 'styled-components';
+import { BadgeVariant } from '@/components/badge/constants';
+import { ButtonHTMLAttributes, ReactNode } from 'react';
 
 const filledVariantStyles = css`
   color: ${({ theme }) => theme.COLOR.WHITE};
@@ -40,11 +40,11 @@ type Props = {
   variant?: BadgeVariant;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const Badge = ({
+export function Badge({
   children,
   variant = BadgeVariant.FILLED,
   ...props
-}: Props) => {
+}: Props) {
   const badgeStylesMap = {
     [BadgeVariant.FILLED]: filledVariantStyles,
     [BadgeVariant.OUTLINE]: outlineVariantStyles,
@@ -55,4 +55,4 @@ export const Badge = ({
       {children}
     </SBadge>
   );
-};
+}

@@ -1,17 +1,18 @@
-"use client";
-import styled, { css } from "styled-components";
-import BlueLight from "@/assets/images/blue.png";
-import PinkLight from "@/assets/images/pink.png";
-import Image from "next/image";
-import { Well } from "@/components/well";
-import MeditateSvg from "@/assets/icons/meditate.svg";
-import BookSvg from "@/assets/icons/book.svg";
-import { useState } from "react";
-import { Button } from "@/components/button";
-import { RoutePath } from "@/constants/routing";
-import { useRouter } from "next/navigation";
-import { getSoundSets } from "@/api/sound-set";
-import { useEffect } from "react";
+'use client';
+
+import styled, { css } from 'styled-components';
+import BlueLight from '@/assets/images/blue.png';
+import PinkLight from '@/assets/images/pink.png';
+import Image from 'next/image';
+import { Well } from '@/components/well';
+import MeditateSvg from '@/assets/icons/meditate.svg';
+import SoundSvg from '@/assets/icons/sound.svg';
+import BookSvg from '@/assets/icons/book.svg';
+import { useState, useEffect } from 'react';
+import { Button } from '@/components/button';
+import { RoutePath } from '@/constants/routing';
+import { useRouter } from 'next/navigation';
+import { getSoundSets } from '@/api/sound-set';
 
 const SHeader = styled.h1`
   text-align: center;
@@ -117,23 +118,36 @@ export default function Page() {
       <SHeader>Where will your mind take you today?</SHeader>
       <SDescription>
         Welcome to our mindful oasis! 🌿 Take a moment to reflect on your mood
-        and choose your path to inner balance. <br />
-        <strong>Meditation</strong> for tranquility or <strong>Focus</strong>{" "}
-        for heightened productivity.{" "}
+        and choose your path to inner balance.
+        {' '}
+        <br />
+        <strong>Meditation</strong>
+        {' '}
+        for tranquility or
+        <strong>Focus</strong>
+        {' '}
+        for heightened productivity.
+        {' '}
         <SJourneySpan>Your journey begins here.</SJourneySpan>
       </SDescription>
-      <SBlueLight src={BlueLight} alt={""} />
-      <SPinkLight src={PinkLight} alt={""} />
+      <SBlueLight src={BlueLight} alt="" />
+      <SPinkLight src={PinkLight} alt="" />
       <SWellContainer>
         <Well
+          icon={SoundSvg}
+          title="Sounds"
+          isActive={activeWellPath === RoutePath.SOUNDS}
+          onClick={() => setActiveWellPath(RoutePath.SOUNDS)}
+        />
+        <Well
           icon={MeditateSvg}
-          title={"Meditation"}
+          title="Meditation"
           isActive={activeWellPath === RoutePath.MEDITATION}
           onClick={() => setActiveWellPath(RoutePath.MEDITATION)}
         />
         <Well
           icon={BookSvg}
-          title={"Focus"}
+          title="Focus"
           isActive={activeWellPath === RoutePath.FOCUS}
           onClick={() => setActiveWellPath(RoutePath.FOCUS)}
         />

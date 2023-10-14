@@ -1,7 +1,7 @@
-import LoaderLottie from "@/assets/lotties/loader.json";
-import { Player } from "@lottiefiles/react-lottie-player";
-import styled from "styled-components";
-import { hexWithAlpha } from "@/utils/styles";
+import LoaderLottie from '@/assets/lotties/loader.json';
+import { Player } from '@lottiefiles/react-lottie-player';
+import styled from 'styled-components';
+import { hexWithAlpha } from '@/utils/styles';
 
 const SContainer = styled.div`
   display: flex;
@@ -28,7 +28,7 @@ type Props = {
   isLoading?: boolean;
 };
 
-export const Loader = ({ message = "Loading...", isLoading = true }: Props) => {
+export function Loader({ message = 'Loading...', isLoading = true }: Props) {
   if (!isLoading) {
     return null;
   }
@@ -39,9 +39,9 @@ export const Loader = ({ message = "Loading...", isLoading = true }: Props) => {
         autoplay
         loop
         src={LoaderLottie}
-        style={{ height: "300px", width: "300px" }}
+        style={{ height: '300px', width: '300px' }}
       />
       <SMessage>{message}</SMessage>
     </SContainer>
   );
-};
+}

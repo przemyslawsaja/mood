@@ -1,17 +1,18 @@
-"use client";
-import styled, { css } from "styled-components";
-import { Button } from "@/components/button";
-import { useRouter } from "next/navigation";
-import { RoutePath } from "@/constants/routing";
-import { COLOR } from "@/theme/styles/color";
-import { MeditationIntroduction } from "@/app/dashboard/meditation/components/meditation-introduction";
-import { MeditationWizard } from "@/app/dashboard/meditation/components/meditation-wizard";
-import { useToggle } from "@/hooks/use-toggle";
-import { Player } from "@lottiefiles/react-lottie-player";
-import { useTimer } from "@/hooks/use-timer";
-import TimerSvg from "@/assets/icons/timer.svg";
-import ArrowBackSvg from "@/assets/icons/arrow-back.svg";
-import MeditationLottie from "@/assets/lotties/meditation.json";
+'use client';
+
+import styled, { css } from 'styled-components';
+import { Button } from '@/components/button';
+import { useRouter } from 'next/navigation';
+import { RoutePath } from '@/constants/routing';
+import { COLOR } from '@/theme/styles/color';
+import { MeditationIntroduction } from '@/app/dashboard/meditation/components/meditation-introduction';
+import { MeditationWizard } from '@/app/dashboard/meditation/components/meditation-wizard';
+import { useToggle } from '@/hooks/use-toggle';
+import { Player } from '@lottiefiles/react-lottie-player';
+import { useTimer } from '@/hooks/use-timer';
+import TimerSvg from '@/assets/icons/timer.svg';
+import ArrowBackSvg from '@/assets/icons/arrow-back.svg';
+import MeditationLottie from '@/assets/lotties/meditation.json';
 
 const SHeader = styled.div`
   display: flex;
@@ -72,8 +73,7 @@ const SArrowBackSvg = styled(ArrowBackSvg)`
 
 export default function Page() {
   const { push } = useRouter();
-  const { isToggled: isMediationWizardEnabled, enable: enableMediationWizard } =
-    useToggle(false);
+  const { isToggled: isMediationWizardEnabled, enable: enableMediationWizard } = useToggle(false);
   const { timer, setTimer, isFinished } = useTimer();
   const showTimer = isMediationWizardEnabled && !isFinished;
 
@@ -95,7 +95,7 @@ export default function Page() {
               autoplay
               loop
               src={MeditationLottie}
-              style={{ height: "300px", width: "300px" }}
+              style={{ height: '300px', width: '300px' }}
             />
             {showTimer && (
               <STimer>

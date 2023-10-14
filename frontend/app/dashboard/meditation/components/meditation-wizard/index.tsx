@@ -1,18 +1,18 @@
-import styled from "styled-components";
-import { Wizard } from "@/modules/wizard";
-import { useWizard } from "@/modules/wizard/hooks/use-wizard";
+import styled from 'styled-components';
+import { Wizard } from '@/modules/wizard';
+import { useWizard } from '@/modules/wizard/hooks/use-wizard';
 import {
   MeditationWizardStep,
   meditationWizardSteps,
-} from "@/app/dashboard/meditation/constants";
-import React, { ReactNode, useEffect } from "react";
-import { useRouter } from "next/navigation";
-import { RoutePath } from "@/constants/routing";
-import { SetTimeLimit } from "@/app/dashboard/meditation/steps/set-time-limit-step";
-import { FocusOnBreath } from "../../steps/focus-on-breath";
-import { BodyScan } from "@/app/dashboard/meditation/steps/body-scan";
-import { useToggle } from "@/hooks/use-toggle";
-import { Modal } from "@/components/modal";
+} from '@/app/dashboard/meditation/constants';
+import React, { ReactNode, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { RoutePath } from '@/constants/routing';
+import { SetTimeLimit } from '@/app/dashboard/meditation/steps/set-time-limit-step';
+import { BodyScan } from '@/app/dashboard/meditation/steps/body-scan';
+import { useToggle } from '@/hooks/use-toggle';
+import { Modal } from '@/components/modal';
+import { FocusOnBreath } from '../../steps/focus-on-breath';
 
 const SContainer = styled.div`
   margin-top: 2rem;
@@ -34,7 +34,7 @@ type Props = {
   isFinished: boolean;
 };
 
-export const MeditationWizard = ({ setTimer, isFinished }: Props) => {
+export function MeditationWizard({ setTimer, isFinished }: Props) {
   const { push } = useRouter();
   const {
     isToggled: isModalToggled,
@@ -42,8 +42,9 @@ export const MeditationWizard = ({ setTimer, isFinished }: Props) => {
     disable: disableModal,
   } = useToggle();
 
-  const { remainingSteps, completedSteps, activeStep, initializeSteps } =
-    useWizard();
+  const {
+    remainingSteps, completedSteps, activeStep, initializeSteps,
+  } = useWizard();
 
   const meditationWizardStepsComponentsMap: Record<string, ReactNode> = {
     [MeditationWizardStep.SET_TIME_LIMIT]: <SetTimeLimit {...{ setTimer }} />,
@@ -76,7 +77,7 @@ export const MeditationWizard = ({ setTimer, isFinished }: Props) => {
       />
       <Modal
         isOpen={isModalToggled}
-        title={"Are you sure?"}
+        title="Are you sure?"
         onClose={disableModal}
         onSubmit={() => push(RoutePath.DASHBOARD)}
         closeLabel="No, take me back"
@@ -98,4 +99,4 @@ export const MeditationWizard = ({ setTimer, isFinished }: Props) => {
       </Modal>
     </SContainer>
   );
-};
+}

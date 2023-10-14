@@ -1,15 +1,15 @@
-import styled from "styled-components";
-import { useToggle } from "@/hooks/use-toggle";
-import ArrowDownSvg from "@/assets/icons/arrow-down.svg";
-import { COLOR } from "@/theme/styles/color";
-import { Badge } from "@/components/badge";
-import { BadgeVariant } from "@/components/badge/constants";
-import React, { useState } from "react";
-import { Modal } from "@/components/modal";
+import styled from 'styled-components';
+import { useToggle } from '@/hooks/use-toggle';
+import ArrowDownSvg from '@/assets/icons/arrow-down.svg';
+import { COLOR } from '@/theme/styles/color';
+import { Badge } from '@/components/badge';
+import { BadgeVariant } from '@/components/badge/constants';
+import React, { useState } from 'react';
+import { Modal } from '@/components/modal';
 import {
   BreathingTechnique,
   breathingTechniques,
-} from "@/app/dashboard/meditation/steps/focus-on-breath/constants";
+} from '@/app/dashboard/meditation/steps/focus-on-breath/constants';
 
 const SContainer = styled.div`
   display: flex;
@@ -29,7 +29,7 @@ const SDropdownTitle = styled.span`
 const SArrowContainer = styled.div<{ $isToggled: boolean }>`
   display: flex;
   transition: ${({ theme }) => theme.TRANSITION.MEDIUM_SMOOTH};
-  transform: ${({ $isToggled }) => ($isToggled ? "rotate(180deg)" : "")};
+  transform: ${({ $isToggled }) => ($isToggled ? 'rotate(180deg)' : '')};
 `;
 
 const SArrowDownSvg = styled(ArrowDownSvg)`
@@ -60,9 +60,8 @@ const SDropdownContent = styled.div`
   flex-wrap: wrap;
 `;
 
-export const FocusOnBreath = () => {
-  const [activeBreathingTechnique, setActiveBreathingTechnique] =
-    useState<BreathingTechnique>();
+export function FocusOnBreath() {
+  const [activeBreathingTechnique, setActiveBreathingTechnique] = useState<BreathingTechnique>();
   const { isToggled: isDropdownToggled, toggle: toggleDropdown } = useToggle();
   const {
     isToggled: isModalToggled,
@@ -105,11 +104,11 @@ export const FocusOnBreath = () => {
       )}
       <Modal
         isOpen={isModalToggled}
-        title={activeBreathingTechnique?.title ?? "Breathing technique"}
+        title={activeBreathingTechnique?.title ?? 'Breathing technique'}
         onClose={disableModal}
       >
         {activeBreathingTechnique?.description}
       </Modal>
     </SContainer>
   );
-};
+}

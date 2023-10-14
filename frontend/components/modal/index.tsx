@@ -1,7 +1,7 @@
-import styled, { css } from "styled-components";
-import { ReactNode } from "react";
-import { Button } from "@/components/button";
-import { ButtonVariant } from "@/components/button/constants";
+import styled, { css } from 'styled-components';
+import { ReactNode } from 'react';
+import { Button } from '@/components/button';
+import { ButtonVariant } from '@/components/button/constants';
 
 const SModal = styled.div`
   top: 50%;
@@ -66,7 +66,7 @@ type Props = {
   closeLabel?: string;
 };
 
-export const Modal = ({
+export function Modal({
   title,
   children,
   isOpen,
@@ -74,27 +74,25 @@ export const Modal = ({
   onClose,
   submitLabel,
   closeLabel,
-}: Props) => {
+}: Props) {
   if (!isOpen) {
     return;
   }
 
   return (
-    <>
-      <SBackdrop>
-        <SModal>
-          <STitle>{title}</STitle>
-          <SContent>{children}</SContent>
-          <SFooter>
-            <Button variant={ButtonVariant.OUTLINE} onClick={onClose}>
-              {closeLabel || "Close"}
-            </Button>
-            {onSubmit && (
-              <Button onClick={onSubmit}>{submitLabel || "Submit"}</Button>
-            )}
-          </SFooter>
-        </SModal>
-      </SBackdrop>
-    </>
+    <SBackdrop>
+      <SModal>
+        <STitle>{title}</STitle>
+        <SContent>{children}</SContent>
+        <SFooter>
+          <Button variant={ButtonVariant.OUTLINE} onClick={onClose}>
+            {closeLabel || 'Close'}
+          </Button>
+          {onSubmit && (
+          <Button onClick={onSubmit}>{submitLabel || 'Submit'}</Button>
+          )}
+        </SFooter>
+      </SModal>
+    </SBackdrop>
   );
-};
+}

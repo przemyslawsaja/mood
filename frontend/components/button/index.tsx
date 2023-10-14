@@ -1,7 +1,7 @@
-import React, { ButtonHTMLAttributes, ReactNode } from "react";
-import styled, { css, RuleSet } from "styled-components";
-import { className } from "postcss-selector-parser";
-import { ButtonVariant } from "@/components/button/constants";
+import React, { ButtonHTMLAttributes, ReactNode } from 'react';
+import styled, { css, RuleSet } from 'styled-components';
+import { className } from 'postcss-selector-parser';
+import { ButtonVariant } from '@/components/button/constants';
 
 const gradientVariantStyles = css`
   color: ${({ theme }) => theme.COLOR.WHITE};
@@ -33,11 +33,11 @@ const SButton = styled.button<{
   align-items: center;
   justify-content: center;
   height: 3rem;
-  border-radius: ${({ $icon }) => ($icon ? "50%" : "3rem")};
+  border-radius: ${({ $icon }) => ($icon ? '50%' : '3rem')};
   border: 0;
   letter-spacing: ${({ theme }) => theme.FONT.TRACKING.WIDER};
   font-weight: ${({ theme }) => theme.FONT.WEIGHT.BOLD};
-  width: ${({ $icon }) => ($icon ? "3rem" : "100%")};
+  width: ${({ $icon }) => ($icon ? '3rem' : '100%')};
   transition: ${({ theme }) => theme.TRANSITION.MEDIUM_SMOOTH};
 
   ${({ $variantStyle }) => $variantStyle};
@@ -50,12 +50,12 @@ type Props = {
   icon?: boolean;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const Button = ({
+export function Button({
   variant = ButtonVariant.GRADIENT,
   children,
   icon = false,
   ...props
-}: Props) => {
+}: Props) {
   const buttonStylesMap = {
     [ButtonVariant.GRADIENT]: gradientVariantStyles,
     [ButtonVariant.OUTLINE]: outlineVariantStyles,
@@ -66,4 +66,4 @@ export const Button = ({
       {children}
     </SButton>
   );
-};
+}

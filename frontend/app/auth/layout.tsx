@@ -1,16 +1,17 @@
-"use client";
-import BlueLight from "@/assets/images/blue.png";
-import PinkLight from "@/assets/images/pink.png";
-import styled, { css } from "styled-components";
-import Image from "next/image";
-import { RoutePath } from "@/constants/routing";
-import ArrowForwardSvg from "@/assets/icons/arrow-forward.svg";
-import { COLOR } from "@/theme/styles/color";
-import Link from "next/link";
-import { useEffect } from "react";
-import { useSession } from "next-auth/react";
-import { SessionStatus } from "@/constants/browser";
-import { useRouter } from "next/navigation";
+'use client';
+
+import BlueLight from '@/assets/images/blue.png';
+import PinkLight from '@/assets/images/pink.png';
+import styled, { css } from 'styled-components';
+import Image from 'next/image';
+import { RoutePath } from '@/constants/routing';
+import ArrowForwardSvg from '@/assets/icons/arrow-forward.svg';
+import { COLOR } from '@/theme/styles/color';
+import Link from 'next/link';
+import { useEffect } from 'react';
+import { useSession } from 'next-auth/react';
+import { SessionStatus } from '@/constants/browser';
+import { useRouter } from 'next/navigation';
 
 const SBlueLight = styled(Image)`
   z-index: -1;
@@ -97,15 +98,11 @@ export default function AuthLayout({
 
   return (
     <>
-      <SBlueLight src={BlueLight} alt={""} />
-      <SPinkLight src={PinkLight} alt={""} />
+      <SBlueLight src={BlueLight} alt="" />
+      <SPinkLight src={PinkLight} alt="" />
       <SContainer>
         <SLogo>mood.</SLogo>
         {children}
-        <SLink href={RoutePath.DASHBOARD}>
-          I want to use it without account{" "}
-          <SArrowForwardSvg color={COLOR.GRAY_400} />
-        </SLink>
       </SContainer>
     </>
   );

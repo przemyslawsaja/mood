@@ -1,9 +1,9 @@
-import styled, { css } from "styled-components";
-import { COLOR } from "@/theme/styles/color";
-import React, { ElementType } from "react";
-import BlueLight from "@/assets/images/blue.png";
-import PinkLight from "@/assets/images/pink.png";
-import Image from "next/image";
+import styled, { css } from 'styled-components';
+import { COLOR } from '@/theme/styles/color';
+import React, { ElementType } from 'react';
+import BlueLight from '@/assets/images/blue.png';
+import PinkLight from '@/assets/images/pink.png';
+import Image from 'next/image';
 
 const SWellContainer = styled.div<{
   $isActive: boolean;
@@ -15,7 +15,7 @@ const SWellContainer = styled.div<{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: ${({ $isActive }) => ($isActive ? `4rem 2rem 2rem 2rem` : "2rem")};
+  padding: ${({ $isActive }) => ($isActive ? '4rem 2rem 2rem 2rem' : '2rem')};
   transition: ${({ theme }) => theme.TRANSITION.MEDIUM_SMOOTH};
   position: relative;
   cursor: pointer;
@@ -26,11 +26,10 @@ const SWellContainer = styled.div<{
   }
 
   ${({ $isActive }) => css`
-    width: ${$isActive ? "15rem" : "12rem"};
-    height: ${$isActive ? "15rem" : "12rem"};
-    gap: ${$isActive ? "2rem" : "0.5rem"};
-    box-shadow: ${({ theme }) =>
-      $isActive ? theme.SHADOW.PRIMARY_GLOW : "none"};
+    width: ${$isActive ? '15rem' : '12rem'};
+    height: ${$isActive ? '15rem' : '12rem'};
+    gap: ${$isActive ? '2rem' : '0.5rem'};
+    box-shadow: ${({ theme }) => ($isActive ? theme.SHADOW.PRIMARY_GLOW : 'none')};
   `};
 `;
 
@@ -38,10 +37,8 @@ const STitle = styled.span<{
   $isActive: boolean;
 }>`
   transition: ${({ theme }) => theme.TRANSITION.MEDIUM_SMOOTH};
-  color: ${({ theme, $isActive }) =>
-    $isActive ? theme.COLOR.WHITE : theme.COLOR.INDIGO_200};
-  font-size: ${({ theme, $isActive }) =>
-    $isActive ? theme.FONT.SIZE.LG : theme.FONT.SIZE.SM};
+  color: ${({ theme, $isActive }) => ($isActive ? theme.COLOR.WHITE : theme.COLOR.INDIGO_200)};
+  font-size: ${({ theme, $isActive }) => ($isActive ? theme.FONT.SIZE.LG : theme.FONT.SIZE.SM)};
   z-index: ${({ theme }) => theme.Z_INDEX.MEDIUM}};
 `;
 
@@ -53,7 +50,7 @@ const SIconContainer = styled.div<{ $isActive: boolean }>`
 
 const SBlueLight = styled(Image)<{ $isActive: boolean }>`
   transition: ${({ theme }) => theme.TRANSITION.SLOW};
-  display: ${({ $isActive }) => ($isActive ? "block" : "none")};
+  display: ${({ $isActive }) => ($isActive ? 'block' : 'none')};
   position: absolute;
   width: 30rem;
   height: 30rem;
@@ -79,20 +76,20 @@ type Props = {
   onClick(): void;
 };
 
-export const Well = ({
+export function Well({
   title,
   icon: Icon,
   isActive = false,
   onClick,
-}: Props) => {
+}: Props) {
   return (
     <SWellContainer $isActive={isActive} onClick={onClick}>
-      <SBlueLight src={BlueLight} alt={""} $isActive={isActive} />
-      <SPinkLight src={PinkLight} alt={""} $isActive={isActive} />
+      <SBlueLight src={BlueLight} alt="" $isActive={isActive} />
+      <SPinkLight src={PinkLight} alt="" $isActive={isActive} />
       <SIconContainer $isActive={isActive}>
         <Icon color={isActive ? COLOR.WHITE : COLOR.INDIGO_200} />
       </SIconContainer>
       <STitle $isActive={isActive}>{title}</STitle>
     </SWellContainer>
   );
-};
+}

@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const SDescription = styled.div`
   color: ${({ theme }) => theme.COLOR.GRAY_400};
 `;
 
-export const BodyScan = () => {
+export function BodyScan() {
   return (
     <div>
       <strong>Body Scan</strong>
@@ -18,4 +18,4 @@ export const BodyScan = () => {
       </SDescription>
     </div>
   );
-};
+}
