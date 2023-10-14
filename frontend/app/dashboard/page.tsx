@@ -8,11 +8,10 @@ import { Well } from '@/components/well';
 import MeditateSvg from '@/assets/icons/meditate.svg';
 import SoundSvg from '@/assets/icons/sound.svg';
 import BookSvg from '@/assets/icons/book.svg';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/button';
 import { RoutePath } from '@/constants/routing';
 import { useRouter } from 'next/navigation';
-import { getSoundSets } from '@/api/sound-set';
 
 const SHeader = styled.h1`
   text-align: center;
@@ -108,10 +107,6 @@ export default function Page() {
   const [activeWellPath, setActiveWellPath] = useState<RoutePath>(
     RoutePath.MEDITATION,
   );
-
-  useEffect(() => {
-    const data = getSoundSets();
-  }, []);
 
   return (
     <SWrapper>

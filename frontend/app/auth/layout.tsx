@@ -5,9 +5,6 @@ import PinkLight from '@/assets/images/pink.png';
 import styled, { css } from 'styled-components';
 import Image from 'next/image';
 import { RoutePath } from '@/constants/routing';
-import ArrowForwardSvg from '@/assets/icons/arrow-forward.svg';
-import { COLOR } from '@/theme/styles/color';
-import Link from 'next/link';
 import { useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import { SessionStatus } from '@/constants/browser';
@@ -69,19 +66,6 @@ const SLogo = styled.h1`
   `};
 `;
 
-const SLink = styled(Link)`
-  margin-top: 0.5rem;
-  color: ${({ theme }) => theme.COLOR.GRAY_400};
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  align-self: center;
-`;
-
-const SArrowForwardSvg = styled(ArrowForwardSvg)`
-  transform: scale(0.5);
-`;
-
 export default function AuthLayout({
   children,
 }: {
@@ -94,7 +78,7 @@ export default function AuthLayout({
     if (status === SessionStatus.Authenticated) {
       push(RoutePath.DASHBOARD);
     }
-  }, [status]);
+  }, [status, push]);
 
   return (
     <>

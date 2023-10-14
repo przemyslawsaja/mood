@@ -3,7 +3,7 @@
 import { AuthForm } from '@/app/auth/components/auth-form';
 
 export default function Page() {
-    return (
-        <AuthForm register/>
-    );
+  return (
+    <AuthForm register />
+  );
 }

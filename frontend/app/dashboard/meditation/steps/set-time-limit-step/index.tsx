@@ -38,9 +38,9 @@ export function SetTimeLimit({ setTimer }: Props) {
 
   return (
     <SContainer>
-      {timeOptions.map((option, idx) => (
+      {timeOptions.map((option) => (
         <Badge
-          key={idx}
+          key={option.value}
           variant={BadgeVariant.OUTLINE}
           onClick={() => selectTimeHandler(option.value)}
         >

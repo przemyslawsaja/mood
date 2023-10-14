@@ -1,6 +1,5 @@
 import React, { ButtonHTMLAttributes, ReactNode } from 'react';
 import styled, { css, RuleSet } from 'styled-components';
-import { className } from 'postcss-selector-parser';
 import { ButtonVariant } from '@/components/button/constants';
 
 const gradientVariantStyles = css`

@@ -10,8 +10,8 @@ export enum MeditationWizardStep {
 }
 
 export const meditationWizardSteps: Override<
-  Omit<WizardStep, 'component'>,
-  { name: MeditationWizardStep }
+Omit<WizardStep, 'component'>,
+{ name: MeditationWizardStep }
 >[] = [
   {
     name: MeditationWizardStep.SET_TIME_LIMIT,

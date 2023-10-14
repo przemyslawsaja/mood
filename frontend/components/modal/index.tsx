@@ -76,7 +76,7 @@ export function Modal({
   closeLabel,
 }: Props) {
   if (!isOpen) {
-    return;
+    return null;
   }
 
   return (

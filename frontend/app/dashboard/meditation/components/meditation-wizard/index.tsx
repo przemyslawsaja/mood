@@ -62,12 +62,12 @@ export function MeditationWizard({ setTimer, isFinished }: Props) {
       return push(RoutePath.DASHBOARD);
     }
 
-    enableModal();
+    return enableModal();
   };
 
   useEffect(() => {
     initializeSteps(steps);
-  }, []);
+  }, [initializeSteps, steps]);
 
   return (
     <SContainer>

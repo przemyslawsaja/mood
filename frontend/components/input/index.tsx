@@ -32,8 +32,8 @@ const SError = styled.div`
 `;
 
 type InputAttrs = Pick<
-  HTMLInputElement,
-  'disabled' | 'max' | 'maxLength' | 'min' | 'placeholder' | 'type'
+HTMLInputElement,
+'disabled' | 'max' | 'maxLength' | 'min' | 'placeholder' | 'type'
 >;
 
 type Props = Partial<InputAttrs> & {
