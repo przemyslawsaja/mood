@@ -12,9 +12,13 @@ import { useState } from 'react';
 import { Button } from '@/components/button';
 import { RoutePath } from '@/constants/routing';
 import { useRouter } from 'next/navigation';
+import { useSession } from 'next-auth/react';
+import { Loader } from '@/components/loader';
+import { SessionStatus } from '@/constants/browser';
 
 const SHeader = styled.h1`
-  text-align: center;
+  margin: 0;
+  
   ${({ theme: { BREAKPOINTS, MEDIA } }) => css`
     ${MEDIA.MIN_WIDTH(BREAKPOINTS.MD)} {
       padding-top: 0rem;
@@ -23,9 +27,9 @@ const SHeader = styled.h1`
 `;
 
 const SDescription = styled.div`
-  text-align: center;
   color: ${({ theme }) => theme.COLOR.GRAY_400};
-
+  margin-top: 1rem;
+  
   ${({ theme: { BREAKPOINTS, MEDIA } }) => css`
     ${MEDIA.MIN_WIDTH(BREAKPOINTS.MD)} {
       margin-bottom: 5rem;
@@ -93,63 +97,77 @@ const SFooter = styled.div`
   `};
 `;
 
+const SName = styled.span`
+  color: ${({ theme }) => theme.COLOR.PRIMARY_300};
+  margin-left: 0.5rem;
+`;
+
 const SButton = styled(Button)`
   max-width: 15rem;
 `;
 
 const SJourneySpan = styled.span`
   color: ${({ theme }) => theme.COLOR.PRIMARY_200};
+  margin-left: 0.2rem;
 `;
 
 export default function Page() {
   const { push } = useRouter();
-
+  const { data: session, status } = useSession();
   const [activeWellPath, setActiveWellPath] = useState<RoutePath>(
     RoutePath.MEDITATION,
   );
 
+  if (status === SessionStatus.Loading) {
+    return <Loader isLoading />;
+  }
+
   return (
-    <SWrapper>
-      <SHeader>Where will your mind take you today?</SHeader>
-      <SDescription>
-        Welcome to our mindful oasis! 🌿 Take a moment to reflect on your mood
-        and choose your path to inner balance.
-        {' '}
-        <br />
-        <strong>Meditation</strong>
-        {' '}
-        for tranquility or
-        <strong>Focus</strong>
-        {' '}
-        for heightened productivity.
-        {' '}
-        <SJourneySpan>Your journey begins here.</SJourneySpan>
-      </SDescription>
-      <SBlueLight src={BlueLight} alt="" />
-      <SPinkLight src={PinkLight} alt="" />
-      <SWellContainer>
-        <Well
-          icon={SoundSvg}
-          title="Sounds"
-          isActive={activeWellPath === RoutePath.SOUNDS}
-          onClick={() => setActiveWellPath(RoutePath.SOUNDS)}
-        />
-        <Well
-          icon={MeditateSvg}
-          title="Meditation"
-          isActive={activeWellPath === RoutePath.MEDITATION}
-          onClick={() => setActiveWellPath(RoutePath.MEDITATION)}
-        />
-        <Well
-          icon={BookSvg}
-          title="Focus"
-          isActive={activeWellPath === RoutePath.FOCUS}
-          onClick={() => setActiveWellPath(RoutePath.FOCUS)}
-        />
-      </SWellContainer>
-      <SFooter>
-        <SButton onClick={() => push(activeWellPath)}> Continue </SButton>
-      </SFooter>
-    </SWrapper>
+    <>
+      <SWrapper>
+        <SHeader>
+          Hello
+          <SName>
+            {session?.user.name}
+          </SName>
+          ,
+        </SHeader>
+        <SHeader>Where will your mind take you today?</SHeader>
+        <SDescription>
+          Welcome to our mindful oasis! 🌿 Take a moment to reflect on your mood
+          <br />
+          and choose your path to inner balance.
+          <SJourneySpan>Your journey begins here.</SJourneySpan>
+        </SDescription>
+        <SBlueLight src={BlueLight} alt="" />
+        <SPinkLight src={PinkLight} alt="" />
+        <SWellContainer>
+          <Well
+            icon={SoundSvg}
+            resizeOnActive
+            title="Sounds"
+            isActive={activeWellPath === RoutePath.SOUNDS}
+            onClick={() => setActiveWellPath(RoutePath.SOUNDS)}
+          />
+          <Well
+            icon={MeditateSvg}
+            resizeOnActive
+            title="Meditation"
+            isActive={activeWellPath === RoutePath.MEDITATION}
+            onClick={() => setActiveWellPath(RoutePath.MEDITATION)}
+          />
+          <Well
+            icon={BookSvg}
+            resizeOnActive
+            title="Focus"
+            isActive={activeWellPath === RoutePath.FOCUS}
+            onClick={() => setActiveWellPath(RoutePath.FOCUS)}
+          />
+        </SWellContainer>
+        <SFooter>
+          <SButton onClick={() => push(activeWellPath)}> Continue </SButton>
+        </SFooter>
+      </SWrapper>
+    </>
   );
 }

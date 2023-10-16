@@ -67,7 +67,7 @@ export function MeditationWizard({ setTimer, isFinished }: Props) {
 
   useEffect(() => {
     initializeSteps(steps);
-  }, [initializeSteps, steps]);
+  }, []);
 
   return (
     <SContainer>

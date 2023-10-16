@@ -1,7 +1,7 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
-export enum AUTH_FORM_FIELDS {
+export enum AuthFormFields {
   NAME = 'name',
   EMAIL = 'email',
   PASSWORD = 'password',
@@ -9,34 +9,34 @@ export enum AUTH_FORM_FIELDS {
 }
 
 export type SignInForm = {
-  [AUTH_FORM_FIELDS.EMAIL]: string;
-  [AUTH_FORM_FIELDS.PASSWORD]: string;
+  [AuthFormFields.EMAIL]: string;
+  [AuthFormFields.PASSWORD]: string;
 };
 
 export type SignUpForm = {
-  [AUTH_FORM_FIELDS.NAME]: string;
-  [AUTH_FORM_FIELDS.REPEAT_PASSWORD]: string;
+  [AuthFormFields.NAME]: string;
+  [AuthFormFields.REPEAT_PASSWORD]: string;
 } & SignInForm;
 
 export const defaultSignInFormValues = {
-  [AUTH_FORM_FIELDS.EMAIL]: '',
-  [AUTH_FORM_FIELDS.PASSWORD]: '',
+  [AuthFormFields.EMAIL]: '',
+  [AuthFormFields.PASSWORD]: '',
 };
 
 export const defaultSignUpFormValues = {
-  [AUTH_FORM_FIELDS.NAME]: '',
-  [AUTH_FORM_FIELDS.EMAIL]: '',
-  [AUTH_FORM_FIELDS.PASSWORD]: '',
-  [AUTH_FORM_FIELDS.REPEAT_PASSWORD]: '',
+  [AuthFormFields.NAME]: '',
+  [AuthFormFields.EMAIL]: '',
+  [AuthFormFields.PASSWORD]: '',
+  [AuthFormFields.REPEAT_PASSWORD]: '',
 };
 
 export const signInSchema = yupResolver(
   yup.object().shape({
-    [AUTH_FORM_FIELDS.EMAIL]: yup
+    [AuthFormFields.EMAIL]: yup
       .string()
       .required('Field is required')
       .email(),
-    [AUTH_FORM_FIELDS.PASSWORD]: yup
+    [AuthFormFields.PASSWORD]: yup
       .string()
       .min(6, 'Min 6 chars')
       .required('Field is required'),
@@ -45,18 +45,18 @@ export const signInSchema = yupResolver(
 
 export const signUpSchema = yupResolver(
   yup.object().shape({
-    [AUTH_FORM_FIELDS.NAME]: yup
+    [AuthFormFields.NAME]: yup
       .string()
       .required('Field is required'),
-    [AUTH_FORM_FIELDS.EMAIL]: yup
+    [AuthFormFields.EMAIL]: yup
       .string()
       .required('Field is required')
       .email(),
-    [AUTH_FORM_FIELDS.PASSWORD]: yup
+    [AuthFormFields.PASSWORD]: yup
       .string()
       .min(6, 'Min 6 chars')
       .required('Field is required'),
-    [AUTH_FORM_FIELDS.REPEAT_PASSWORD]: yup
+    [AuthFormFields.REPEAT_PASSWORD]: yup
       .string()
       .min(6, 'Min 6 chars')
       .required('Field is required')

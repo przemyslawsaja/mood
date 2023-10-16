@@ -14,23 +14,19 @@
   "plugins": ["@typescript-eslint"],
   "root": true,
   "rules": {
-    "@typescript-eslint/no-explicit-any": "off",
     "import/prefer-default-export": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "off",
     "react/forbid-prop-types": "off",
+    "react-hooks/exhaustive-dep": "off",
+    "react/jsx-no-useless-fragment": "off",
+    "react/require-default-props": "off",
+    "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/naming-convention": [
       "warn",
       {
         "selector": "variable",
         "format": ["camelCase", "PascalCase"]
-      }
-    ],
-    "react/jsx-no-useless-fragment": "off",
-    "react/require-default-props": [
-      "error",
-      {
-        "ignoreFunctionalComponents": true
       }
     ]
   }

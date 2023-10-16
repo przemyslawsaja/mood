@@ -40,9 +40,9 @@
         "async": false
       }
     },
-    "(app-client)/./app/dashboard/page.tsx": {
+    "(app-client)/./app/loading.tsx": {
       "*": {
-        "id": "(sc_client)/./app/dashboard/page.tsx",
+        "id": "(sc_client)/./app/loading.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -56,17 +56,9 @@
         "async": false
       }
     },
-    "(app-client)/./app/loading.tsx": {
+    "(app-client)/./app/dashboard/sounds/page.tsx": {
       "*": {
-        "id": "(sc_client)/./app/loading.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./app/providers.tsx": {
-      "*": {
-        "id": "(sc_client)/./app/providers.tsx",
+        "id": "(sc_client)/./app/dashboard/sounds/page.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -80,17 +72,9 @@
         "async": false
       }
     },
-    "(app-client)/./app/auth/layout.tsx": {
+    "(app-client)/./app/providers.tsx": {
       "*": {
-        "id": "(sc_client)/./app/auth/layout.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./app/auth/sign-in/page.tsx": {
-      "*": {
-        "id": "(sc_client)/./app/auth/sign-in/page.tsx",
+        "id": "(sc_client)/./app/providers.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -179,11 +163,11 @@
       ],
       "async": false
     },
-    "/Users/przemyslawsaja/Repositories/mood/frontend/app/dashboard/page.tsx": {
-      "id": "(app-client)/./app/dashboard/page.tsx",
+    "/Users/przemyslawsaja/Repositories/mood/frontend/app/loading.tsx": {
+      "id": "(app-client)/./app/loading.tsx",
       "name": "*",
       "chunks": [
-        "app/dashboard/page:static/chunks/app/dashboard/page.js"
+        "app/loading:static/chunks/app/loading.js"
       ],
       "async": false
     },
@@ -195,19 +179,11 @@
       ],
       "async": false
     },
-    "/Users/przemyslawsaja/Repositories/mood/frontend/app/loading.tsx": {
-      "id": "(app-client)/./app/loading.tsx",
+    "/Users/przemyslawsaja/Repositories/mood/frontend/app/dashboard/sounds/page.tsx": {
+      "id": "(app-client)/./app/dashboard/sounds/page.tsx",
       "name": "*",
       "chunks": [
-        "app/loading:static/chunks/app/loading.js"
-      ],
-      "async": false
-    },
-    "/Users/przemyslawsaja/Repositories/mood/frontend/app/providers.tsx": {
-      "id": "(app-client)/./app/providers.tsx",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/dashboard/sounds/page:static/chunks/app/dashboard/sounds/page.js"
       ],
       "async": false
     },
@@ -227,31 +203,21 @@
       ],
       "async": false
     },
-    "/Users/przemyslawsaja/Repositories/mood/frontend/app/auth/layout.tsx": {
-      "id": "(app-client)/./app/auth/layout.tsx",
+    "/Users/przemyslawsaja/Repositories/mood/frontend/app/providers.tsx": {
+      "id": "(app-client)/./app/providers.tsx",
       "name": "*",
       "chunks": [
-        "app/auth/layout:static/chunks/app/auth/layout.js"
-      ],
-      "async": false
-    },
-    "/Users/przemyslawsaja/Repositories/mood/frontend/app/auth/sign-in/page.tsx": {
-      "id": "(app-client)/./app/auth/sign-in/page.tsx",
-      "name": "*",
-      "chunks": [
-        "app/auth/sign-in/page:static/chunks/app/auth/sign-in/page.js"
+        "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
     }
   },
   "entryCSSFiles": {
-    "/Users/przemyslawsaja/Repositories/mood/frontend/app/dashboard/page": [],
-    "/Users/przemyslawsaja/Repositories/mood/frontend/app/dashboard/layout": [],
     "/Users/przemyslawsaja/Repositories/mood/frontend/app/loading": [],
+    "/Users/przemyslawsaja/Repositories/mood/frontend/app/dashboard/layout": [],
+    "/Users/przemyslawsaja/Repositories/mood/frontend/app/dashboard/sounds/page": [],
     "/Users/przemyslawsaja/Repositories/mood/frontend/app/layout": [
       "static/css/app/layout.css"
-    ],
-    "/Users/przemyslawsaja/Repositories/mood/frontend/app/auth/layout": [],
-    "/Users/przemyslawsaja/Repositories/mood/frontend/app/auth/sign-in/page": []
+    ]
   }
 }

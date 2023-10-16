@@ -9,10 +9,10 @@ import { RoutePath } from '@/constants/routing';
 import { Loader } from '@/components/loader';
 import { useLoader } from '@/hooks/use-loader';
 import { signIn } from 'next-auth/react';
-import { toast } from 'react-hot-toast';
 import { apiSignUp } from '@/api/auth';
+import { toast } from 'react-hot-toast';
 import {
-  AUTH_FORM_FIELDS,
+  AuthFormFields,
   defaultSignInFormValues, defaultSignUpFormValues,
   SignInForm,
   signInSchema, SignUpForm, signUpSchema,
@@ -107,8 +107,8 @@ export function AuthForm({ register = false }: Props) {
   const control = register ? signUpControl : signInControl;
   const handleSubmit = register ? signUpHandleSubmit : signInHandleSubmit;
   const errors = register
-    ? (signUpError as Record<AUTH_FORM_FIELDS, FieldError>)
-    : (signInErrors as Record<AUTH_FORM_FIELDS, FieldError>);
+    ? (signUpError as Record<AuthFormFields, FieldError>)
+    : (signInErrors as Record<AuthFormFields, FieldError>);
 
   const onSubmit = async (form: SignInForm | SignUpForm) => {
     try {
@@ -116,7 +116,14 @@ export function AuthForm({ register = false }: Props) {
       if (register) {
         await apiSignUp({ ...form as SignUpForm });
       }
-      await signIn('credentials', { ...form, redirect: false });
+
+      const { error } = await signIn('credentials', { ...form, redirect: false }) || {};
+      console.log(error);
+
+      if (error) {
+        return toast.error('Oops! Invalid login. Please check your credentials.');
+      }
+
       toast.success("Success! You're in. Welcome back!");
       push(RoutePath.DASHBOARD);
     } finally {
@@ -148,31 +155,31 @@ export function AuthForm({ register = false }: Props) {
           <Input
             label="Name"
             control={control}
-            name={AUTH_FORM_FIELDS.NAME}
-            error={errors[AUTH_FORM_FIELDS.NAME]}
+            name={AuthFormFields.NAME}
+            error={errors[AuthFormFields.NAME]}
           />
           )}
           <Input
             label="Email"
             control={control}
-            name={AUTH_FORM_FIELDS.EMAIL}
-            error={errors[AUTH_FORM_FIELDS.EMAIL]}
+            name={AuthFormFields.EMAIL}
+            error={errors[AuthFormFields.EMAIL]}
           />
           <SLastInput>
             <Input
               label="Password"
               control={control}
               type="password"
-              name={AUTH_FORM_FIELDS.PASSWORD}
-              error={errors[AUTH_FORM_FIELDS.PASSWORD]}
+              name={AuthFormFields.PASSWORD}
+              error={errors[AuthFormFields.PASSWORD]}
             />
             {register && (
             <Input
               label="Repeat password"
               control={control}
               type="password"
-              name={AUTH_FORM_FIELDS.REPEAT_PASSWORD}
-              error={errors[AUTH_FORM_FIELDS.REPEAT_PASSWORD]}
+              name={AuthFormFields.REPEAT_PASSWORD}
+              error={errors[AuthFormFields.REPEAT_PASSWORD]}
             />
             )}
           </SLastInput>

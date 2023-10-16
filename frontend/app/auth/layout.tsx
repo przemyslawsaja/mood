@@ -78,7 +78,7 @@ export default function AuthLayout({
     if (status === SessionStatus.Authenticated) {
       push(RoutePath.DASHBOARD);
     }
-  }, [status, push]);
+  }, [status]);
 
   return (
     <>

@@ -1,7 +1,7 @@
 import LoaderLottie from '@/assets/lotties/loader.json';
-import { Player } from '@lottiefiles/react-lottie-player';
 import styled from 'styled-components';
 import { hexWithAlpha } from '@/utils/styles';
+import { Player } from '@lottiefiles/react-lottie-player';
 
 const SContainer = styled.div`
   display: flex;
@@ -15,6 +15,8 @@ const SContainer = styled.div`
   position: fixed;
   z-index: ${({ theme }) => theme.Z_INDEX.HIGHEST};
   color: ${({ theme }) => theme.COLOR.PRIMARY_100};
+  top: 0;
+  left: 0;
 `;
 
 const SMessage = styled.p`
