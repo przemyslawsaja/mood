@@ -128,6 +128,8 @@ export function AuthForm({ register = false }: Props) {
     } finally {
       stopLoading();
     }
+
+    return {};
   };
 
   return (

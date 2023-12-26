@@ -1,7 +1,6 @@
 'use client';
 
 import styled, { css } from 'styled-components';
-import { Button } from '@/components/button';
 import { useRouter } from 'next/navigation';
 import { RoutePath } from '@/constants/routing';
 import { COLOR } from '@/theme/styles/color';
@@ -11,32 +10,13 @@ import { useToggle } from '@/hooks/use-toggle';
 import { Player } from '@lottiefiles/react-lottie-player';
 import { useTimer } from '@/hooks/use-timer';
 import TimerSvg from '@/assets/icons/timer.svg';
-import ArrowBackSvg from '@/assets/icons/arrow-back.svg';
 import MeditationLottie from '@/assets/lotties/meditation.json';
 import { TopNavigation } from '@/components/top-navigation';
-
-const SHeader = styled.div`
-  margin-bottom: 2rem;
-`;
-
-const SNavigation = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-`;
 
 const STimer = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
-`;
-
-const SH1 = styled.h1`
-  ${({ theme: { BREAKPOINTS, MEDIA } }) => css`
-    ${MEDIA.MIN_WIDTH(BREAKPOINTS.MD)} {
-      padding-top: 0rem;
-    }
-  `};
 `;
 
 const SContainer = styled.div`
@@ -64,10 +44,6 @@ const SFlex = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-
-const SArrowBackSvg = styled(ArrowBackSvg)`
-  transform: scale(0.8);
 `;
 
 export default function Page() {

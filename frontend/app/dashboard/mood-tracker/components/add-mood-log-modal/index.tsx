@@ -5,11 +5,9 @@ import { MoodImageMap, MoodLogStatus } from '@/constants/mood-tracker';
 import styled from 'styled-components';
 import Image from 'next/image';
 import { useState } from 'react';
-import { Nullable } from '@/types/common';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { createMoodLog, removeMoodLog } from '@/api/axios/mood-log';
-import { Button } from '@/components/button';
+import { createMoodLog } from '@/api/axios/mood-log';
 
 const SContainer = styled.div`
   display: flex;

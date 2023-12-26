@@ -4,7 +4,7 @@ import CredentialsProvider from 'next-auth/providers/credentials';
 import { apiSignIn, SignInDto, SignInPayload } from '@/api/axios/auth';
 import { RoutePath } from "@/constants/routing";
 
-export const authOptions: NextAuthOptions = {
+const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
       name: 'Credentials',

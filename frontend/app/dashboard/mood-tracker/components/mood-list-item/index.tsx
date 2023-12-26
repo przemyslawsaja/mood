@@ -1,7 +1,6 @@
 import { MoodLogStatus, MoodImageMap } from '@/constants/mood-tracker';
 import styled, { css } from 'styled-components';
 import Image from 'next/image';
-import { Button } from '@/components/button';
 import RemoveSvg from '@/assets/icons/remove.svg';
 
 const SContainer = styled.div`
