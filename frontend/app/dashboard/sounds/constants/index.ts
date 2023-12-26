@@ -28,7 +28,7 @@ const defaultAudioSettings: Pick<Sound, 'audio' | 'volume'> = {
   volume: 0,
 };
 
-export const initialSoundsValues: MapOrEntries<SoundName, Sound> = [
+export const initialSoundsValues: MapOrEntries<SoundName, Sound> = ([
   [SoundName.FIRE_PIT, {
     icon: FireSvg, title: 'Fire pit', source: FireSound, ...defaultAudioSettings,
   }],
@@ -47,4 +47,25 @@ export const initialSoundsValues: MapOrEntries<SoundName, Sound> = [
   [SoundName.TRAIN, {
     icon: TrainSvg, title: 'Train', source: TrainSound, ...defaultAudioSettings,
   }],
-];
+]);
+
+export const initialMixerSoundsValues: Record<SoundName, Sound> = {
+  [SoundName.FIRE_PIT]: {
+    icon: FireSvg, title: 'Fire pit', source: FireSound, ...defaultAudioSettings,
+  },
+  [SoundName.WATERFALL]: {
+    icon: WaterfallSvg, title: 'Waterfall', source: WaterfallSound, ...defaultAudioSettings,
+  },
+  [SoundName.SEA]: {
+    icon: SeaSvg, title: 'Sea', source: SeaSound, ...defaultAudioSettings,
+  },
+  [SoundName.RAIN]: {
+    icon: RainSvg, title: 'Rain', source: RainSound, ...defaultAudioSettings,
+  },
+  [SoundName.BIRDS]: {
+    icon: BirdsSvg, title: 'Birds', source: BirdsSound, ...defaultAudioSettings,
+  },
+  [SoundName.TRAIN]: {
+    icon: TrainSvg, title: 'Train', source: TrainSound, ...defaultAudioSettings,
+  },
+};

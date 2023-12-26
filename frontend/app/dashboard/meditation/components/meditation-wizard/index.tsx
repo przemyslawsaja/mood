@@ -19,8 +19,10 @@ const SContainer = styled.div`
 `;
 
 const SModalContent = styled.div`
+  margin: 1rem 0;
   display: flex;
   flex-direction: column;
+  text-align: center;
   gap: 1rem;
   color: ${({ theme }) => theme.COLOR.GRAY_500};
 `;
@@ -81,7 +83,7 @@ export function MeditationWizard({ setTimer, isFinished }: Props) {
         onClose={disableModal}
         onSubmit={() => push(RoutePath.DASHBOARD)}
         closeLabel="No, take me back"
-        submitLabel="Yes, I want to finish the session"
+        submitLabel="Yes, finish the session"
       >
         <SModalContent>
           <div>

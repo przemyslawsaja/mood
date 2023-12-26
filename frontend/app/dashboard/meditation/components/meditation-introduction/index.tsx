@@ -23,6 +23,7 @@ const SPrimarySpan = styled.span`
 
 const SDescription = styled.div`
   color: ${({ theme }) => theme.COLOR.GRAY_400};
+  margin-top: 2rem;
 
   ${({ theme: { BREAKPOINTS, MEDIA } }) => css`
     ${MEDIA.MIN_WIDTH(BREAKPOINTS.MD)} {

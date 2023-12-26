@@ -1,12 +1,11 @@
 'use client';
 
-import LoaderLottie from '@/assets/lotties/loader.json';
-import { Player } from '@lottiefiles/react-lottie-player';
 import styled from 'styled-components';
 import Image from 'next/image';
 import BlueLight from '@/assets/images/blue.png';
 import PinkLight from '@/assets/images/pink.png';
 import React from 'react';
+import { Loader } from '@/components/loader';
 
 const SContainer = styled.div`
   width: 100%;
@@ -41,12 +40,7 @@ export default function Loading() {
     <SContainer>
       <SBlueLight src={BlueLight} alt="" />
       <SPinkLight src={PinkLight} alt="" />
-      <Player
-        autoplay
-        loop
-        src={LoaderLottie}
-        style={{ height: '300px', width: '300px' }}
-      />
+      <Loader />
     </SContainer>
   );
 }

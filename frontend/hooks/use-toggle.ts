@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 export const useToggle = (defaultState: boolean = false) => {
   const [isToggled, setIsToggled] = useState<boolean>(defaultState);
@@ -7,5 +7,7 @@ export const useToggle = (defaultState: boolean = false) => {
   const disable = (): void => setIsToggled(false);
   const toggle = (): void => setIsToggled(!isToggled);
 
-  return { isToggled, enable, disable, toggle };
+  return {
+    isToggled, enable, disable, toggle,
+  };
 };

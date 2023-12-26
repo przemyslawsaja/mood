@@ -13,12 +13,10 @@ import { useTimer } from '@/hooks/use-timer';
 import TimerSvg from '@/assets/icons/timer.svg';
 import ArrowBackSvg from '@/assets/icons/arrow-back.svg';
 import MeditationLottie from '@/assets/lotties/meditation.json';
+import { TopNavigation } from '@/components/top-navigation';
 
 const SHeader = styled.div`
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  justify-content: space-between;
+  margin-bottom: 2rem;
 `;
 
 const SNavigation = styled.div`
@@ -53,6 +51,7 @@ const SWizardContainer = styled.div`
   display: flex;
   flex-direction: column-reverse;
   gap: 2rem;
+  margin-top: 2rem;
 
   ${({ theme: { BREAKPOINTS, MEDIA } }) => css`
     ${MEDIA.MIN_WIDTH(BREAKPOINTS.MD)} {
@@ -79,14 +78,7 @@ export default function Page() {
 
   return (
     <SContainer>
-      <SHeader>
-        <SNavigation>
-          <Button icon onClick={() => push(RoutePath.DASHBOARD)}>
-            <SArrowBackSvg />
-          </Button>
-          <SH1>Meditation</SH1>
-        </SNavigation>
-      </SHeader>
+      <TopNavigation name="Meditation" onBack={() => push(RoutePath.DASHBOARD)} />
       {isMediationWizardEnabled ? (
         <SWizardContainer>
           <MeditationWizard {...{ setTimer, isFinished }} />

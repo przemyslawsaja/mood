@@ -4,5 +4,5 @@ export enum RoutePath {
   DASHBOARD = '/dashboard',
   SOUNDS = '/dashboard/sounds',
   MEDITATION = '/dashboard/meditation',
-  FOCUS = '/dashboard/focus',
+  MOOD_TRACKER = '/dashboard/mood-tracker',
 }

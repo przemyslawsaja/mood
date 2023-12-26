@@ -1,10 +1,12 @@
-import { DEFAULT_VOLUME, SoundName } from '@/constants/sound-sets';
+import { DEFAULT_VOLUMES, DEFAULT_VOLUME, SoundName } from '@/constants/sound-sets';
 import { initialSoundsValues, Sound } from '@/app/dashboard/sounds/constants';
 import { ChangeEvent } from 'react';
-import { useMap } from 'usehooks-ts';
+import { useMap, MapOrEntries } from 'usehooks-ts';
 
 export const useSoundMixer = () => {
   const [soundsMap, actions] = useMap<SoundName, Sound>(initialSoundsValues);
+
+  const sounds: MapOrEntries<SoundName, Sound> = Array.from(soundsMap.entries());
 
   const disableSound = (sound: Sound, key: SoundName): void => {
     sound.audio?.pause();
@@ -45,11 +47,26 @@ export const useSoundMixer = () => {
     actions.set(key, { ...sound, volume });
   };
 
-  const sounds: [SoundName, Sound][] = Array.from(soundsMap.entries());
+  const reset = (): void => {
+    actions.setAll(initialSoundsValues);
+    soundsMap.forEach((sound) => sound.audio?.pause());
+  };
+
+  const getVolumes = () => {
+    const volumes = DEFAULT_VOLUMES;
+
+    sounds.forEach(([key, sound]) => {
+      volumes[key] = sound.volume;
+    });
+
+    return volumes;
+  };
 
   return {
     onVolumeChange,
     onSoundClick,
     sounds,
+    reset,
+    getVolumes,
   };
 };

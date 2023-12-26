@@ -159,9 +159,9 @@ export default function Page() {
           <Well
             icon={BookSvg}
             resizeOnActive
-            title="Focus"
-            isActive={activeWellPath === RoutePath.FOCUS}
-            onClick={() => setActiveWellPath(RoutePath.FOCUS)}
+            title="Tracker"
+            isActive={activeWellPath === RoutePath.MOOD_TRACKER}
+            onClick={() => setActiveWellPath(RoutePath.MOOD_TRACKER)}
           />
         </SWellContainer>
         <SFooter>

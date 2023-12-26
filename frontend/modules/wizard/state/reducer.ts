@@ -1,6 +1,6 @@
-import { WizardState } from "@/modules/wizard/state/context";
-import { WizardStep } from "@/modules/wizard/constants";
-import { ReducerAction } from "@/types/common";
+import { WizardState } from '@/modules/wizard/state/context';
+import { WizardStep } from '@/modules/wizard/constants';
+import { ReducerAction } from '@/types/common';
 
 type Action =
   | ReducerAction<WizardActionType.INITIALIZE_STEPS, WizardStep[]>
@@ -65,6 +65,6 @@ export const wizardReducer = (
     case WizardActionType.SET_STEP:
       return setStep(state, payload as WizardStep);
     default:
-      throw new Error("Invalid wizard action type");
+      throw new Error('Invalid wizard action type');
   }
 };

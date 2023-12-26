@@ -12,6 +12,7 @@ const SContainer = styled.div`
   height: 100vh;
   background: ${({ theme }) => hexWithAlpha(theme.COLOR.NIGHTFALL_300, 10)};
   backdrop-filter: blur(0.2rem);
+  gap: 5rem;
   position: fixed;
   z-index: ${({ theme }) => theme.Z_INDEX.HIGHEST};
   color: ${({ theme }) => theme.COLOR.PRIMARY_100};
@@ -30,7 +31,7 @@ type Props = {
   isLoading?: boolean;
 };
 
-export function Loader({ message = 'Loading...', isLoading = true }: Props) {
+export function Loader({ message, isLoading = true }: Props) {
   if (!isLoading) {
     return null;
   }
@@ -41,9 +42,9 @@ export function Loader({ message = 'Loading...', isLoading = true }: Props) {
         autoplay
         loop
         src={LoaderLottie}
-        style={{ height: '300px', width: '300px' }}
+        style={{ height: '60px', width: '60px' }}
       />
-      <SMessage>{message}</SMessage>
+      {message && <SMessage>{message}</SMessage>}
     </SContainer>
   );
 }

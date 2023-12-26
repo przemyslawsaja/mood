@@ -62,6 +62,7 @@ const SContainer = styled.div`
 const SControls = styled.div`
   display: flex;
   justify-content: end;
+  margin-bottom: 2rem;
 `;
 
 const SLogout = styled.button`

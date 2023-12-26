@@ -106,7 +106,7 @@ export function Well({
       <SVolumeSlider
         type="range"
         id="volume-slider"
-        value={volume}
+        value={volume * 100}
         onChange={onVolumeChange}
         onClick={(e: MouseEvent) => e.stopPropagation()}
       />

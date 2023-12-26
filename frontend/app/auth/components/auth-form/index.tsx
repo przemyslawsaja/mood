@@ -9,7 +9,7 @@ import { RoutePath } from '@/constants/routing';
 import { Loader } from '@/components/loader';
 import { useLoader } from '@/hooks/use-loader';
 import { signIn } from 'next-auth/react';
-import { apiSignUp } from '@/api/auth';
+import { apiSignUp } from '@/api/axios/auth';
 import { toast } from 'react-hot-toast';
 import {
   AuthFormFields,
@@ -83,8 +83,8 @@ type Props = {
 };
 
 export function AuthForm({ register = false }: Props) {
-  const { push } = useRouter();
   const { isLoading, stopLoading, startLoading } = useLoader();
+  const { push } = useRouter();
 
   const {
     formState: { errors: signUpError },
@@ -118,7 +118,6 @@ export function AuthForm({ register = false }: Props) {
       }
 
       const { error } = await signIn('credentials', { ...form, redirect: false }) || {};
-      console.log(error);
 
       if (error) {
         return toast.error('Oops! Invalid login. Please check your credentials.');

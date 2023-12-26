@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components';
-import { ReactNode } from 'react';
 import { Button } from '@/components/button';
 import { ButtonVariant } from '@/components/button/constants';
+import { ModalProps } from '@/components/modal/types';
+import { hexWithAlpha } from '@/utils/styles';
 
 const SModal = styled.div`
   top: 50%;
@@ -9,7 +10,8 @@ const SModal = styled.div`
   transform: translate(-50%, -50%);
   position: fixed;
   z-index: ${({ theme }) => theme.Z_INDEX.HIGHEST};
-  background: ${({ theme }) => theme.COLOR.WHITE};
+  background: ${({ theme }) => theme.COLOR.NIGHTFALL_500};
+  box-shadow: ${({ theme }) => theme.SHADOW.LIGHT_PRIMARY_GLOW};
   border-radius: ${({ theme }) => theme.BORDER_RADIUS.XL};
   padding: 2rem;
   color: ${({ theme }) => theme.COLOR.GRAY_800};
@@ -18,14 +20,26 @@ const SModal = styled.div`
   width: 90vw;
 
   ${({ theme: { BREAKPOINTS, MEDIA } }) => css`
-    ${MEDIA.MIN_WIDTH(BREAKPOINTS.MD)} {
-      max-width: 50vw;
+    ${MEDIA.MIN_WIDTH(BREAKPOINTS.SM)} {
+      max-width: 80vw;
+    }
+  `};
+  
+  ${({ theme: { BREAKPOINTS, MEDIA } }) => css`
+    ${MEDIA.MIN_WIDTH(BREAKPOINTS.LG)} {
+      max-width: 60vw;
+    }
+  `};
+
+  ${({ theme: { BREAKPOINTS, MEDIA } }) => css`
+    ${MEDIA.MIN_WIDTH(BREAKPOINTS.XL)} {
+      max-width: 40vw;
     }
   `};
 `;
 
 const SBackdrop = styled.div`
-  background: rgba(0, 0, 0, 0.45);
+  background: ${({ theme }) => hexWithAlpha(theme.COLOR.BLACK, 40)};
   left: 0;
   top: 0;
   width: 100vw;
@@ -38,9 +52,11 @@ const SBackdrop = styled.div`
 const STitle = styled.h1`
   margin: 0;
   text-align: center;
+  color: ${({ theme }) => theme.COLOR.GRAY_300};
 `;
 
 const SContent = styled.div`
+  color: ${({ theme }) => theme.COLOR.GRAY_400};
   padding: 2rem 0;
 `;
 
@@ -56,16 +72,6 @@ const SFooter = styled.div`
   `};
 `;
 
-type Props = {
-  isOpen: boolean;
-  title: string;
-  children?: ReactNode;
-  onClose(): void;
-  onSubmit?(): void;
-  submitLabel?: string;
-  closeLabel?: string;
-};
-
 export function Modal({
   title,
   children,
@@ -74,7 +80,7 @@ export function Modal({
   onClose,
   submitLabel,
   closeLabel,
-}: Props) {
+}: ModalProps) {
   if (!isOpen) {
     return null;
   }
