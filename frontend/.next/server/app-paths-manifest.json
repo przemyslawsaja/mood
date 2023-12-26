@@ -1,8 +1,0 @@
-{
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/dashboard/page": "app/dashboard/page.js",
-  "/dashboard/mood-tracker/page": "app/dashboard/mood-tracker/page.js",
-  "/dashboard/meditation/page": "app/dashboard/meditation/page.js",
-  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
-  "/dashboard/sounds/page": "app/dashboard/sounds/page.js"
-}
