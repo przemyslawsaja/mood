@@ -9,10 +9,10 @@ import { Button } from '@/components/button';
 import AddCircleSvg from '@/assets/icons/add-circle.svg';
 import { AddMoodLogModal } from '@/app/dashboard/mood-tracker/components/add-mood-log-modal';
 import { useToggle } from '@/hooks/use-toggle';
-import { useMoodLogs } from '@/api/swr/use-mood-logs';
+import { useMoodLogs } from '@/endpoints/swr/use-mood-logs';
 import { Loader } from '@/components/loader';
 import dayjs from 'dayjs';
-import { removeMoodLog } from '@/api/axios/mood-log';
+import { removeMoodLog } from '@/endpoints/axios/mood-log';
 
 const SDescription = styled.div`
   color: ${({ theme }) => theme.COLOR.GRAY_400};

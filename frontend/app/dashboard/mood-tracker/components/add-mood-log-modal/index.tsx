@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { createMoodLog } from '@/api/axios/mood-log';
+import { createMoodLog } from '@/endpoints/axios/mood-log';
 
 const SContainer = styled.div`
   display: flex;

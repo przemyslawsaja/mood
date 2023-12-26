@@ -1,6 +1,6 @@
-import { apiClient } from '@/api/axios/index';
-import { CreateMoodLogDto } from '@/api/types/mood-log';
-import { ENDPOINTS } from '@/api/endpoints';
+import { apiClient } from '@/endpoints/axios/index';
+import { CreateMoodLogDto } from '@/endpoints/types/mood-log';
+import { ENDPOINTS } from '../constants';
 
 export const getMoodLogs = async (): Promise<any> => {
   const { data } = await apiClient.get('/mood-log');

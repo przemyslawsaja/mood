@@ -1,4 +1,4 @@
-import { SignInDto } from '@/api/axios/auth';
+import { SignInDto } from '@/endpoints/axios/auth';
 
 declare module 'next-auth' {
   interface Session {

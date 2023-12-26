@@ -1,4 +1,4 @@
-import { apiClient } from '@/api/axios/index';
+import { apiClient } from '@/endpoints/axios/index';
 
 export type UserDto = {
   name: string;

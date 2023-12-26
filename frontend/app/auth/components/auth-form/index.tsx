@@ -9,7 +9,7 @@ import { RoutePath } from '@/constants/routing';
 import { Loader } from '@/components/loader';
 import { useLoader } from '@/hooks/use-loader';
 import { signIn } from 'next-auth/react';
-import { apiSignUp } from '@/api/axios/auth';
+import { apiSignUp } from '@/endpoints/axios/auth';
 import { toast } from 'react-hot-toast';
 import {
   AuthFormFields,
