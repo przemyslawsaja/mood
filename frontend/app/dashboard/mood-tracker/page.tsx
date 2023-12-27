@@ -110,7 +110,7 @@ export default function Page() {
           status, content, createdAt, _id,
         }) => (
           <MoodListItem
-            date={dayjs(createdAt).format('MM/DD/YYYY')}
+            date={dayjs(createdAt).format('DD/MM//YYYY')}
             content={content}
             onRemove={() => handleRemove(_id)}
             mood={status}

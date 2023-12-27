@@ -5,7 +5,7 @@ import PinkLight from '@/assets/images/pink.png';
 import styled, { css } from 'styled-components';
 import Image from 'next/image';
 import { RoutePath } from '@/constants/routing';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import { SessionStatus } from '@/constants/browser';
 import { useRouter } from 'next/navigation';
@@ -45,14 +45,8 @@ const SContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
-
-  ${({ theme: { BREAKPOINTS, MEDIA } }) => css`
-    ${MEDIA.MIN_WIDTH(BREAKPOINTS.MD)} {
-      justify-content: center;
-    }
-  `};
 `;
 
 const SLogo = styled.h1`

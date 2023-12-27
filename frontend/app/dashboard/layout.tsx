@@ -9,6 +9,7 @@ import ExitSvg from '@/assets/icons/exit.svg';
 import { WizardProvider } from '@/modules/wizard/state/context';
 import { COLOR } from '@/theme/styles/color';
 import { signOut } from 'next-auth/react';
+import { hexWithAlpha } from '@/utils/styles';
 
 const SBlueLight = styled(Image)`
   z-index: -1;
@@ -44,25 +45,58 @@ const SPinkLight = styled(Image)`
 
 const SContainer = styled.div`
   width: 100%;
-  margin: auto;
   padding: 2rem;
   overflow: hidden;
   position: relative;
-
+  margin: 3rem auto;
+  
   ${({ theme: { BREAKPOINTS, MEDIA } }) => css`
     ${MEDIA.MIN_WIDTH(BREAKPOINTS.MD)} {
       max-width: 100rem;
       padding: 5rem;
       overflow: visible;
       height: 100%;
+      margin: auto;
     }
   `};
 `;
 
-const SControls = styled.div`
-  display: flex;
+const SLogo = styled.h1`
+  font-size: ${({ theme }) => theme.FONT.SIZE.LG};
+`;
+
+const SDesktopHeader = styled.div`
   justify-content: end;
-  margin-bottom: 2rem;
+  width: 100%;
+  display: none;
+    
+  ${({ theme: { BREAKPOINTS, MEDIA } }) => css`
+    ${MEDIA.MIN_WIDTH(BREAKPOINTS.MD)} {
+      display: flex;
+    }
+  `};
+`;
+
+const SMobileHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  height: 3rem;
+  width: 100%;
+  background: ${({ theme }) => hexWithAlpha(theme.COLOR.NIGHTFALL_300, 60)};
+  backdrop-filter: blur(0.5rem);
+  
+  box-shadow: ${({ theme }) => theme.SHADOW.PRIMARY_GLOW};
+  z-index: ${({ theme }) => theme.Z_INDEX.HIGHER};
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 1rem;
+
+  ${({ theme: { BREAKPOINTS, MEDIA } }) => css`
+    ${MEDIA.MIN_WIDTH(BREAKPOINTS.MD)} {
+      display: none;
+    }
+  `};
 `;
 
 const SLogout = styled.button`
@@ -102,12 +136,18 @@ export default function DashboardLayout({
       <SBlueLight src={BlueLight} alt="" />
       <SPinkLight src={PinkLight} alt="" />
       <SContainer>
-        <SControls>
+        <SMobileHeader>
+          <SLogo>mood.</SLogo>
           <SLogout onClick={() => signOut()}>
-            <span>Logout</span>
             <SExitSvg color={COLOR.WHITE} />
           </SLogout>
-        </SControls>
+        </SMobileHeader>
+        <SDesktopHeader>
+          <SLogout onClick={() => signOut()}>
+            <SExitSvg color={COLOR.WHITE} />
+          </SLogout>
+        </SDesktopHeader>
+
         <WizardProvider>{children}</WizardProvider>
       </SContainer>
     </>

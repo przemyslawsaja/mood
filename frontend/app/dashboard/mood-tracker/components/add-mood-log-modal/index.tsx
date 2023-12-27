@@ -2,7 +2,7 @@ import { Modal } from '@/components/modal';
 import { Input } from '@/components/input';
 import { useForm } from 'react-hook-form';
 import { MoodImageMap, MoodLogStatus } from '@/constants/mood-tracker';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Image from 'next/image';
 import { useState } from 'react';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -11,8 +11,15 @@ import { createMoodLog } from '@/endpoints/axios/mood-log';
 
 const SContainer = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  ${({ theme: { BREAKPOINTS, MEDIA } }) => css`
+    ${MEDIA.MIN_WIDTH(BREAKPOINTS.MD)} {
+      flex-direction: row;
+    }
+  `};
 `;
 
 const SMoodStatusBox = styled.div<{
@@ -21,6 +28,7 @@ const SMoodStatusBox = styled.div<{
   height: 9rem;
   width: 9rem;
   display: flex;
+  margin: 0.5rem;
   flex-direction: column;
   gap: 0.5rem;
   align-items: center;

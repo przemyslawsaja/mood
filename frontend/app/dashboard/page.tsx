@@ -92,7 +92,7 @@ const SFooter = styled.div`
 
   ${({ theme: { BREAKPOINTS, MEDIA } }) => css`
     ${MEDIA.MIN_WIDTH(BREAKPOINTS.MD)} {
-      margin-top: 8rem;
+      margin-top: 5rem;
     }
   `};
 `;

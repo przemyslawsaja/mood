@@ -1,8 +1,8 @@
 import { hexWithAlpha } from '@/utils/styles';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import Link from 'next/link';
 import { Input } from '@/components/input';
 import { Button } from '@/components/button';
-import Link from 'next/link';
 import { useForm, FieldError } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 import { RoutePath } from '@/constants/routing';
@@ -23,10 +23,16 @@ const SInnerContainer = styled.div`
   backdrop-filter: blur(2rem);
   border: ${({ theme }) => `0.5px solid ${theme.COLOR.PRIMARY_300}`};
   border-radius: ${({ theme }) => theme.BORDER_RADIUS.XL};
-  width: 30rem;
+  width: 100%;
   position: relative;
   margin-bottom: 2rem;
   padding: 2rem;
+
+  ${({ theme: { BREAKPOINTS, MEDIA } }) => css`
+    ${MEDIA.MIN_WIDTH(BREAKPOINTS.MD)} {
+      width: 30rem;
+    }
+  `};
 `;
 
 const SContent = styled.div`
